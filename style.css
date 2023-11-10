@@ -489,6 +489,11 @@ section {
     height: 100%;
 }
 
+.cat-title {
+    padding-top: 25px;
+    color: white;
+}
+
 /*.description{
     width: 85%;
     color: black;
