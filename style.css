@@ -8,6 +8,8 @@ html, body {
 
 body {
     background-color: palegoldenrod;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -297,6 +299,7 @@ input:focus::placeholder, textarea:focus::placeholder{
     padding: 20px 100px;
     position: fixed;
     z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
 }
 
 .navbar a {
@@ -409,33 +412,16 @@ main {
     margin-top: 50px;
     width: 100%;
     text-align: center;
-    
 }
 
 section {
     margin:0 auto;
 }
 
-.img-caribbean {
-    background: url("images/caribbean.png");
-}
-
-.img-typoposter {
-    background: url("images/typography\ poster.png");
-}
-
-.img-princess {
-    background: url("images/princess.png");
-}
-
-.img-norwegian {
-    background: url("images/norwegian.png")
-}
-
 .parent {
     width: 40%;
     margin: 10px;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -461,54 +447,41 @@ section {
     transition: 0.5s;
 }
 
-.shiptitle {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 30px;
-    color: white;
-}
-
-.section-hr {
-    width: 80%;
-    height: 3px;
-    text-align: center;
-    background: linear-gradient(rgb(128, 128, 128, 0), rgb(128, 128, 128, 0.8), rgb(128, 128, 128, 0));
-    margin: 0 auto;
-}
-
-
-.cruisetitle {
-    padding-top: 25px;
-    color: black;
-}
-
-.artcruise{
+.artwork{
     width: 100%;
     padding: 30px 0px 30px 0px;
 }
 
-.description{
-    width: 85%;
-    color: black;
-    font-size: 18px;
-    padding:15px 35px;
-    text-align: center;
-}
-
-.cruisebox:hover{
+.artbox:hover{
     transition: 0.4s;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 1);
-}
-
-.viewtext{
-    padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: blue;
 }
 
 .display-inline{
     display: inline-block;
 }
+
+/*.description{
+    width: 85%;
+    color: black;
+    font-size: 18px;
+    padding:15px 35px;
+    text-align: center;
+}*/
+
+/*.viewtext{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blue;
+}*/
+
+/*.section-hr {
+    width: 80%;
+    height: 3px;
+    text-align: center;
+    background: linear-gradient(rgb(128, 128, 128, 0), rgb(128, 128, 128, 0.8), rgb(128, 128, 128, 0));
+    margin: 0 auto;
+}*/
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* BANNER STYLE */
