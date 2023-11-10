@@ -7,7 +7,8 @@ html, body {
 }
 
 body {
-    background-color: palegoldenrod;
+    background-color: black;
+    /*background-color: palegoldenrod;*/
     display: flex;
     flex-direction: column;
 }
@@ -22,11 +23,12 @@ body {
     width: 60%;
     max-width: 60%;
     padding: 25px 40px 10px 40px;
-    background: rgb(255, 255, 255, 0.2);
-    border: 1px solid rgb(255, 255, 255, 0.4);
-    border-right: 1px solid rgb(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-    box-shadow: 0px 5px 45px rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 45px rgba(255, 255, 255, 1);
     backdrop-filter: blur(2px);
 }
 
@@ -360,6 +362,7 @@ input:focus::placeholder, textarea:focus::placeholder{
 .dropdown-content a:hover {
     transition: 0.5s;
     background-color: #fff;
+    border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -404,7 +407,6 @@ input:focus::placeholder, textarea:focus::placeholder{
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* TYPEWRITER STYLE */
 
-
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* PORTFOLIO */
 main {
@@ -426,8 +428,9 @@ section {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
-    background-color: rgba(255, 192, 203, 0.1);
+    box-shadow: 0 4px 6px 0 rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 .child {
@@ -454,11 +457,36 @@ section {
 
 .artbox:hover{
     transition: 0.4s;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 6px 10px 0 rgb(255, 255, 255);
 }
 
 .display-inline{
     display: inline-block;
+}
+
+.layer {
+    width: 100%;
+    height: 0%; /* Change this to 0% initially if you want it hidden by default */
+    background: linear-gradient(rgba(130, 255, 255, 0.6),rgb(0, 147, 147));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+    transition: height 0.5s;
+}
+
+.parent.artbox:hover .layer {
+    height: 100%;
 }
 
 /*.description{
@@ -492,10 +520,11 @@ section {
     width: 100%;
     font-size: 25px;
     z-index: -1;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0))
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2))
 }
 
 .effect {
+    color: rgb(237, 228, 228);
     letter-spacing: 10px;
     font-size: 40px;
     font-family: fantasy;
