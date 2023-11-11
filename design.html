@@ -25,8 +25,8 @@
         .img-namecard {
             background: url("images/namecard\(back\).png")
         }
-
-        .submit-btn .input-data a.styled-button {
+        .submit-btn .input-data a.styled-button,
+.parent.artbox .input-data a.styled-button {
     display: block;
     position: relative;
     z-index: 2;
@@ -41,10 +41,11 @@
     transition: 0.5s;
     font-family: monospace;
     text-decoration: none;
-    box-sizing: border-box; /* Added box-sizing property */
+    box-sizing: border-box;
 }
 
-.submit-btn .input-data a.styled-button:hover {
+.submit-btn .input-data a.styled-button:hover,
+.parent.artbox .input-data a.styled-button:hover {
     z-index: 2;
     border: 1px solid paleturquoise;
     color: paleturquoise;
@@ -54,7 +55,9 @@
     letter-spacing: 2px;
     font-family: monospace;
 }
-
+.submit-btn .input-data {
+    overflow: visible;
+}
 
     </style>
 </head>
@@ -102,6 +105,19 @@
                         <p>Created using Figma.</p>
                     </div>
                 </div>
+
+                <div class="parent artbox">
+                    <h2 class="cat-title">DESIGNS</h2>
+                    <div class="form-row submit-btn">
+                        <div class="form-row submit-btn">
+                            <div class="input-data">
+                                <div class="inner"></div>
+                                <a href="design.html" class="styled-button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="parent artbox">
                     <div class="img-maldives child"></div>
                     <div class="layer">
@@ -110,11 +126,13 @@
                         <div class="form-row submit-btn">
                             <div class="input-data">
                                 <div class="inner"></div>
-                                <a href="portfolio work 1 (maldives).html" class="styled-button">View More</a>
+                                <a href="design.html" class="styled-button">View More</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                
             </article>
         </section>
 
