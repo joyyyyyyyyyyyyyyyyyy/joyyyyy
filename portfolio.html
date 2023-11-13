@@ -44,6 +44,24 @@
             letter-spacing: 2px;
             font-family: monospace;
         }
+
+        .artbox {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artwork-image {
+            width: 100%;
+            /* Make the image fill the container width */
+            height: auto;
+            /* Maintain the aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.75;
+            /* Adjust the opacity if needed */
+        }
     </style>
 </head>
 
@@ -84,6 +102,7 @@
         <section>
             <article class="artwork">
                 <div class="parent artbox">
+                    <img src="images/typo-poster(cover).jpg" alt="design img" class="artwork-image child">
                     <h2 class="cat-title">DESIGNS</h2>
                     <div class="form-row submit-btn">
                         <div class="form-row submit-btn">
@@ -95,6 +114,7 @@
                     </div>
                 </div>
                 <div class="parent artbox">
+                    <img src="images/reservationapp(cover).jpg" alt="development img" class="artwork-image child">
                     <h2 class="cat-title">DEVELOPMENT</h2>
                     <div class="form-row submit-btn">
                         <div class="input-data">
