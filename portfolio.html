@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
-        .cat-title {
-            padding-top: 28px;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-        }
 
         .submit-btn .input-data a.styled-button {
             display: block;
@@ -52,15 +46,22 @@
 
         .artwork-image {
             width: 100%;
-            /* Make the image fill the container width */
             height: auto;
-            /* Maintain the aspect ratio */
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
-            opacity: 0.75;
-            /* Adjust the opacity if needed */
+            opacity: 0.5;
+        }
+
+        .banner-portfolio {
+            text-align: center;
+            margin-top: 120px;
+            position: relative;
+            width: 100%;
+            font-size: 25px;
+            z-index: -1;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3))
         }
     </style>
 </head>
@@ -103,7 +104,13 @@
             <article class="artwork">
                 <div class="parent artbox">
                     <img src="images/typo-poster(cover).jpg" alt="design img" class="artwork-image child">
-                    <h2 class="cat-title">DESIGNS</h2>
+                    <div class="banner-portfolio">
+                        <em>
+                            <hr style="border:1px solid grey; width:100%;">
+                            <strong class="effect">DESIGNS</strong>
+                            <hr style="border:1px solid grey; width:100%;">
+                        </em>
+                    </div>
                     <div class="form-row submit-btn">
                         <div class="form-row submit-btn">
                             <div class="input-data">
@@ -114,8 +121,14 @@
                     </div>
                 </div>
                 <div class="parent artbox">
-                    <img src="images/reservationapp(cover).jpg" alt="development img" class="artwork-image child">
-                    <h2 class="cat-title">DEVELOPMENT</h2>
+                    <img src="images/moviesapp(cover).jpg" alt="development img" class="artwork-image child">
+                    <div class="banner-portfolio">
+                        <em>
+                            <hr style="border:1px solid grey; width:100%;">
+                            <strong class="effect">DEVELOPMENT</strong>
+                            <hr style="border:1px solid grey; width:100%;">
+                        </em>
+                    </div>
                     <div class="form-row submit-btn">
                         <div class="input-data">
                             <div class="inner"></div>
