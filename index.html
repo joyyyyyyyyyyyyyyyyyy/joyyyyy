@@ -9,8 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
-        .typing {
-            color: aqua;
+        .btn {
+            display: block;
+            position: relative;
+            border: 2px solid whitesmoke;
+            z-index: 2;
+            background: none;
+            color: whitesmoke;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: lowercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.5s;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            z-index: 2;
+            border: 2px solid paleturquoise;
+            color: paleturquoise;
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            
         }
     </style>
 </head>
@@ -48,11 +72,11 @@
     <!--TYPEWRITER EFFECT-->
     <div class="container">
         <div class="row">
-            <div class="home-info">
-                <h1 style="color: whitesmoke;">Hello! My name is <span>Joy</span></h1><br>
+            <div class="home-info"><br>
+                <h1 style="color: whitesmoke;">Hello! I am <span>Joy</span></h1><br>
                 <h2 style="color: whitesmoke;">I'm a <span class="typing"></span></h2>
-                <!-- <a href="index.html#contact">Contact Me</a>
-                <a href="index.html#work" class="btn">View My Works</a> -->
+                <br>
+                <a href="pdf/resume.pdf" class="btn">Download Resume</a>
             </div>
         </div>
     </div>
@@ -60,7 +84,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
     <script>
         var typed = new Typed(".typing", {
-            strings: ["Web Designer", "Student", "UI Designer"],
+            strings: ["Web Developer", "Student", "UI Designer"],
             typeSpeed: 100,
             backSpeed: 150,
             loop: true

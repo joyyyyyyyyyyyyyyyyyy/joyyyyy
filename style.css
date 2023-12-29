@@ -7,10 +7,11 @@ html, body {
 }
 
 body {
-    background-color: black;
+    background-color: rgb(255, 183, 183);
     /*background-color: palegoldenrod;*/
     display: flex;
     flex-direction: column;
+    font-family: monospace;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -312,7 +313,12 @@ input:focus::placeholder, textarea:focus::placeholder{
     padding: 20px 100px;
     position: fixed;
     z-index: 1;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+
+    
+    /* text-align: right;
+    padding: 40px 0px;
+     */
 }
 
 .navbar a {
@@ -322,10 +328,16 @@ input:focus::placeholder, textarea:focus::placeholder{
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
+
+    /* padding: 0px 30px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    z-index: 2; */
 }
 
 .navbar a:hover {
     color: paleturquoise;
+    transition: 3s;
 }
 
 /* DROPDOWN */
@@ -418,6 +430,9 @@ input:focus::placeholder, textarea:focus::placeholder{
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* TYPEWRITER STYLE */
+.typing {
+    color: aqua;
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* PORTFOLIO */
@@ -555,7 +570,7 @@ section {
     text-decoration: none;
     padding: 12px 20px;
     border: 1px solid whitesmoke;
-    background-color: pink;
+    background-color: rgb(255, 141, 160);
     width: 191px;
   }
   
@@ -564,3 +579,18 @@ section {
     float: right;
     margin-top: 0px;
   }
+
+  .p-heading,
+.p-description {
+  color: rgba(85, 52, 38);
+}
+
+.p-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-name {
+  color: rgba(85, 52, 38, 80%);
+}
