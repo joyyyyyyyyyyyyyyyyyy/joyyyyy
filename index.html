@@ -10,13 +10,13 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
         .btn {
-            display: block;
+            display: flex;
             position: relative;
             border: 2px solid whitesmoke;
             z-index: 2;
             background: none;
             color: whitesmoke;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
             text-transform: lowercase;
             letter-spacing: 1px;
@@ -24,17 +24,25 @@
             transition: 0.5s;
             text-decoration: none;
             box-sizing: border-box;
+            white-space: nowrap;
+            width: 250px;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 0 15px;
+            border-radius: 10px;
         }
 
         .btn:hover {
             z-index: 2;
             border: 2px solid paleturquoise;
             color: paleturquoise;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            
+
         }
     </style>
 </head>
@@ -69,17 +77,21 @@
         </em>
     </div>
 
-    <!--TYPEWRITER EFFECT-->
+    <!--SHORT INTRO-->
     <div class="container">
         <div class="row">
-            <div class="home-info"><br>
+            <div class="home-info text-center"><br><br>
                 <h1 style="color: whitesmoke;">Hello! I am <span>Joy</span></h1><br>
                 <h2 style="color: whitesmoke;">I'm a <span class="typing"></span></h2>
                 <br>
-                <a href="pdf/resume.pdf" class="btn">Download Resume</a>
+                <div class="col-md-6 d-flex justify-content-center offset-md-3">
+                    <a href="about.html" class="btn">about me</a>
+                    <a href="portfolio.html" class="btn">portfolio</a> </div>
+                </div>
             </div>
         </div>
     </div>
+    
     <!-- TYPEWRITER EFFECT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
     <script>

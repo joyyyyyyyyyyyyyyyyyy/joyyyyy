@@ -7,8 +7,8 @@ html, body {
 }
 
 body {
-    background-color: rgb(255, 183, 183);
-    /*background-color: palegoldenrod;*/
+    background-color: #212122;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     font-family: monospace;
@@ -384,7 +384,7 @@ input:focus::placeholder, textarea:focus::placeholder{
 
 .dropdown-content a:hover {
     transition: 0.5s;
-    background-color: #fff;
+    background-color: whitesmoke;
     border-radius: 10px;
 }
 
@@ -431,7 +431,7 @@ input:focus::placeholder, textarea:focus::placeholder{
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* TYPEWRITER STYLE */
 .typing {
-    color: aqua;
+    color: paleturquoise;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -493,7 +493,7 @@ section {
 
 .layer {
     width: 100%;
-    height: 0%; /* Change this to 0% initially if you want it hidden by default */
+    height: 0%; 
     background: linear-gradient(rgba(130, 255, 255, 0.5),rgb(0, 147, 147));
     border-radius: 10px;
     position: absolute;
@@ -582,7 +582,7 @@ section {
 
   .p-heading,
 .p-description {
-  color: rgba(85, 52, 38);
+  color: whitesmoke;
 }
 
 .p-description {
@@ -592,5 +592,5 @@ section {
 }
 
 .title-name {
-  color: rgba(85, 52, 38, 80%);
+  color: rgba(245, 245, 245, 80%);
 }

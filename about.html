@@ -13,6 +13,29 @@
             color: whitesmoke;
             font-size: 16px;
         }
+
+        .face-img {
+            width: 70% !important;
+            padding-bottom: 5%;
+        }
+
+        .face-img {
+            display: flex;
+            margin: 0 auto;
+            align-content: center;
+            justify-content: center;
+            box-shadow: 2px 2px 10px solid black;
+            width: 70%;
+        }
+
+        .about-highlight {
+            padding: 50px 0 50px 0;
+        }
+
+        .card-shadow {
+            box-shadow: 5px 5px 10px paleturquoise;
+
+        }
     </style>
 </head>
 
@@ -42,22 +65,38 @@
         <em>
             <hr style="border:1.5px solid grey; width:100%;">
             <strong class="effect">ABOUT ME</strong>
-            <br>
-            <p class="banner-text">wait, who are you? nevermind, nice to meet you!</p>
             <hr style="border:1.5px solid grey; width:100%;">
         </em>
     </div>
 
     <!--DIALOGUE-->
-    <p>Joy: Hi there, I am Joy, a 2nd year student from Republic Polytechnic, pursuing a Diploma in Digital Design & Development.
+    <!-- <p>Joy: Hi there, I am Joy, a 2nd year student from Republic Polytechnic, pursuing a Diploma in Digital Design & Development.
         I am interested in UIUX design and I aspire to be a UIUX designer one day (although the intern I managed to secure is not
         UIUX related… waoww). Here, on this site, you’ll be able to see the works that I have done the past 2 years, both in school
-        and outside of school. </p><br>
-    
-    <!--<p>anonymous:</p><br>
-    
-    <p>Joy: Well, incase you are wondering, yes, I do have CCA, guess what, not only 1, but 3! (waowww so many!) </p><br>-->
+        and outside of school. </p><br> -->
 
+    <div class="container about-highlight">
+        <div class="row align-item-center">
+            <div class="col-md-6">
+                <img class="face-img" src="images/me.jpg" alt="image">
+            </div>
+            <div class="col-md-6">
+                <div class="card card-shadow fade-out-scrolldown about-card">
+                    <div class="card-body aboutme-font" style="background-color: whitesmoke;">
+                        <p style="color: black;">Hi there, I am <span style="color: red;">Joy</span>, a 2nd year student
+                            from Republic Polytechnic,
+                            pursuing a Diploma in Digital Design & Development
+                            currently studying in Republic
+                            Polythecnic with <span style="color: red;">diploma in Digital
+                                Design and Development.</span>
+                            <br>Some things that I am strong at are UI/UX Design and have passion for designing and
+                            programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--FOOTER-->
     <footer class="foot dark-theme">
@@ -73,14 +112,16 @@
             </a>
             <a href="https://web.telegram.org/k/#@bleeeech" target="_blank">
                 <i class="fa-brands fa-telegram fa-2xl"></i>
-                </a>
-                <a href="https://api.whatsapp.com/send/?phone=6596688756&text&type=phone_number&app_absent=0" target="_blank">
-                    <i class="fa-brands fa-whatsapp fa-2xl"></i>
-                </a>
-                <a href="https://www.instagram.com/jjxjtotheworld/" target="_blank">
-                    <i class="fa-brands fa-instagram fa-2xl"></i>
-                </a>
-            </div>
-        </footer>
-    </body>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=6596688756&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/jjxjtotheworld/" target="_blank">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+
 </html>
