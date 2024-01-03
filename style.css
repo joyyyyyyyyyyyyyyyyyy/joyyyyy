@@ -7,8 +7,8 @@ html, body {
 }
 
 body {
-    background-color: #212122;
-    /* background-color: black; */
+    /* background-color: #212122; */
+    background-color: rgb(255, 164, 164);
     display: flex;
     flex-direction: column;
     font-family: monospace;
@@ -306,93 +306,6 @@ input:focus::placeholder, textarea:focus::placeholder{
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* NAVIGATION BAR */
-.navbar {
-    width: 100%;
-    text-align: center;
-    padding: 20px 100px;
-    position: fixed;
-    z-index: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-
-    
-    /* text-align: right;
-    padding: 40px 0px;
-     */
-}
-
-.navbar a {
-    text-decoration: none;
-    padding: 0px 10px;
-    color: whitesmoke;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 20px;
-
-    /* padding: 0px 30px;
-    border-radius: 10px;
-    font-family: sans-serif;
-    z-index: 2; */
-}
-
-.navbar a:hover {
-    color: paleturquoise;
-    transition: 3s;
-}
-
-/* DROPDOWN */
-.droptext {
-    color: whitesmoke;
-    font-size: 16px;
-    padding: 0px 0px 10px 0px;
-    border-radius: 10px;
-    font-family: monospace
-    
-}
-
-.droptext:hover {
-    color: paleturquoise;
-    font-size: 16px;
-    border-radius: 10px;
-    font-family: sans-serif;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    transition: display 1s ease-in;
-    position: absolute;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
-    min-width: 160px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: whitesmoke;
-    text-align: center;
-    padding: 13px 20px;
-    margin: 5px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    transition: 0.5s;
-    background-color: whitesmoke;
-    border-radius: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* FOOTER */
 .foot {
     display: flex;
@@ -544,7 +457,6 @@ section {
     margin-top: 120px;
     position: relative;
     width: 100%;
-    font-size: 25px;
     z-index: -1;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2))
 }
@@ -552,7 +464,7 @@ section {
 .effect {
     color: rgb(237, 228, 228);
     letter-spacing: 10px;
-    font-size: 40px;
+    font-size: 50px;
     font-family: fantasy;
     z-index: -1;
 }
@@ -565,15 +477,50 @@ section {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* PORTFOLIO STYLE */
-.btn {
+/* .btn {
     display: block;
     text-decoration: none;
     padding: 12px 20px;
     border: 1px solid whitesmoke;
     background-color: rgb(255, 141, 160);
     width: 191px;
-  }
+  } */
   
+  .btn {
+    display: flex;
+    position: relative;
+    border: 2px solid whitesmoke;
+    z-index: 2;
+    background: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    z-index: 2;
+    border: 2px solid paleturquoise;
+    color: paleturquoise;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
   
   .btn-right {
     float: right;
@@ -592,5 +539,5 @@ section {
 }
 
 .title-name {
-  color: rgba(245, 245, 245, 80%);
+  color: rgb(245, 245, 245);
 }

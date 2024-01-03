@@ -1,0 +1,27 @@
+p {
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.face-img {
+    width: 70% !important;
+    padding-bottom: 5%;
+}
+
+.face-img {
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px solid black;
+    width: 70%;
+}
+
+.about-highlight {
+    padding: 50px 0 50px 0;
+}
+
+.card-shadow {
+    box-shadow: 5px 5px 10px paleturquoise;
+
+}
