@@ -10,6 +10,103 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+    <link rel="stylesheet" type="text/css" href="styles/banner.css" />
+    <style>
+        form {
+            max-width: 420px;
+            margin: 50px auto;
+        }
+
+        .feedback-input {
+            color: white;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 10px;
+            line-height: 22px;
+            background-color: transparent;
+            border: 2px solid whitesmoke;
+            transition: all 0.3s;
+            padding: 13px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            outline: 0;
+        }
+
+        .feedback-input:focus {
+            border: 2px solid #CC4949;
+        }
+
+        textarea {
+            height: 150px;
+            line-height: 150%;
+            resize: vertical;
+        }
+
+        [type="submit"] {
+            /* font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            width: 100%;
+            background: #CC6666;
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: all 0.3s;
+            margin-top: -4px;
+            font-weight: 700; */
+
+            /* display: flex; */
+            position: relative;
+            border: 2px solid whitesmoke;
+            z-index: 2;
+            background: none;
+            color: whitesmoke;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: lowercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.5s;
+            text-decoration: none;
+            box-sizing: border-box;
+            white-space: nowrap;
+            width: 100%;
+            height: 55px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 0 15px;
+            border-radius: 10px;
+            font-size: 24px;
+
+            /* display: block;
+    width: 100%;
+    cursor: pointer;
+ 
+    font-size: 20px;
+    padding: 13px;
+    margin-top: 15px;
+    transition: all 0.3s;
+    font-weight: 700;
+    box-sizing: border-box; */
+
+        }
+
+        [type="submit"]:hover {
+            z-index: 2;
+            border: 2px solid paleturquoise;
+            color: paleturquoise;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,19 +129,17 @@
         </nav>
     </header>
 
-        <!--BANNER-->
-        <div class="banner">
-            <em>
-                <hr style="border:1.5px solid grey; width:100%;">
-                <strong class="effect">CONTACT</strong>
-                <br>
-                let's keep in contact!
-                <hr style="border:1.5px solid grey; width:100%;">
-            </em>
-        </div>
+    <!--BANNER-->
+    <div class="banner">
+        <em>
+            <hr style="border:1.5px solid grey; width:100%;">
+            <strong class="effect">CONTACT</strong>
+            <hr style="border:1.5px solid grey; width:100%;">
+        </em>
+    </div>
 
     <!--CONTACT FORM-->
-        <!-- <div class="form-container">
+    <!-- <div class="form-container">
             <div class="text">
                 Contact
             </div>
@@ -77,7 +172,7 @@
                     </div>
 
                 </div> -->
-                <!-- <div class="form-row submit-btn">
+    <!-- <div class="form-row submit-btn">
                     <div class="input-data">
                         <div class="inner"></div>
                         <input href="mailto:joyjoylinnn@gmail.com" type="submit" value="submit">
@@ -86,8 +181,15 @@
             </form>
         </div> -->
 
-        
-        
+
+    <form>
+        <input name="name" type="text" class="feedback-input" required placeholder="Name" />
+        <input name="email" type="text" class="feedback-input" required placeholder="Email" />
+        <input name="contact" type="text" class="feedback-input" required placeholder="Contact" />
+        <input name="subject" type="text" class="feedback-input" required placeholder="Subject" />
+        <textarea name="text" class="feedback-input" required placeholder="Comment"></textarea>
+        <input type="submit" value="SUBMIT" />
+    </form>
 
 
     <!--FOOTER-->
