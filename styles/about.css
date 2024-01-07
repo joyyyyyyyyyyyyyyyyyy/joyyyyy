@@ -25,3 +25,39 @@ p {
     box-shadow: 5px 5px 10px paleturquoise;
 
 }
+
+.btn {
+    display: flex;
+    position: relative;
+    border: 2px solid whitesmoke;
+    z-index: 2;
+    background: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    z-index: 2;
+    border: 2px solid paleturquoise;
+    color: paleturquoise;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}

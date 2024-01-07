@@ -14,41 +14,52 @@
     <link rel="stylesheet" type="text/css" href="styles/footer.css" />
     <link rel="stylesheet" type="text/css" href="styles/banner.css" />
     <style>
-        .btn {
-            display: flex;
-            position: relative;
-            border: 2px solid whitesmoke;
-            z-index: 2;
-            background: none;
-            color: whitesmoke;
-            font-size: 18px;
-            font-weight: 500;
-            text-transform: lowercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: 0.5s;
-            text-decoration: none;
-            box-sizing: border-box;
-            white-space: nowrap;
-            width: 250px;
-            height: 50px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            margin: 0 15px;
-            border-radius: 10px;
-        }
+        .education-timeline {
+  margin-top: 30px;
+}
 
-        .btn:hover {
-            z-index: 2;
-            border: 2px solid paleturquoise;
-            color: paleturquoise;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
 
-        }
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-content {
+  margin-left: 40px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+}
+
+.timeline li:nth-child(even) .timeline-dot {
+  background-color: #007bff; /* Blue for even items */
+}
+
+.timeline li:nth-child(even) .timeline-content {
+  margin-left: 0;
+  text-align: right;
+}
+
+.timeline li:nth-child(even) .timeline-dot {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
 
     </style>
 </head>
@@ -105,6 +116,34 @@
                 <a href="pdf/resume.pdf" target="_blank" class="btn btn-right">download resume</a>
               </div>
             </div>
+          </div>
+
+          <!--EDUCATION TIMELINE-->
+          <div class="education-timeline">
+            <h2 class="timeline-heading">Education Timeline</h2>
+            <ul class="timeline">
+              <li>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Diploma in Digital Design & Development</h3>
+                  <p>Republic Polytechnic (2022 - Present)</p>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Secondary School</h3>
+                  <p>School Name (Years Attended)</p>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Primary School</h3>
+                  <p>School Name (Years Attended)</p>
+                </div>
+              </li>
+            </ul>
           </div>
 
     <!--FOOTER-->
