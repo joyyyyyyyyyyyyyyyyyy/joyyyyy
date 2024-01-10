@@ -14,6 +14,119 @@
     <link rel="stylesheet" type="text/css" href="styles/banner.css" />
     <link rel="stylesheet" type="text/css" href="styles/content.css" />
 
+    <style>
+        .p-heading,
+.p-description {
+  margin-top: 8%;
+  padding: 5% 5% 0% 5%;
+  color: whitesmoke;
+}
+.divider {
+  border-right: 2px solid whitesmoke;
+}
+.title-name {
+  color: whitesmoke 80%;
+}
+
+.hr-pdcontent {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.grid6 {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
+
+.item6 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  color: whitesmoke;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: whitesmoke;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  counter-increment: item-counter;
+}
+
+.item6:nth-of-type(1n) {
+  background-image: url('images/FINTECH MOBILE APP_LOAN APP/Login.png');
+}
+
+.item6:nth-of-type(2n) {
+  background-image: url('images/FINTECH MOBILE APP_LOAN APP/main pg.png');
+}
+
+.item6:nth-of-type(3n) {
+  background-image: url('images/FINTECH MOBILE APP_LOAN APP/Loan\ Apply.png');
+}
+
+.item6:nth-of-type(4n) {
+  background-image: url('Images/Android_filtermovie.PNG');
+}
+
+.item6:nth-of-type(5n) {
+  background-image: url('Images/Android_editmovie.PNG');
+}
+
+.item6:nth-of-type(6n) {
+  background-image: url('Images/Android_alert.PNG');
+}
+
+
+.item6:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.item6:hover {
+  transform: scale(1.05);
+}
+
+.item6:after {
+  opacity: 0;
+}
+
+.item--mediumBig {
+  grid-row-end: span 3;
+}
+
+.item__details {
+  position: relative;
+  z-index: 0;
+  padding: 15px;
+  color: #444;
+  background: #fff;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #828282;
+}
+
+.video-size-landscape {
+  width: 70%;
+}
+
+.video-position {
+  justify-content: center;
+  display: flex;
+}
+
+    </style>
+
 <body>
     <!--NAV BAR-->
     <header>
@@ -44,7 +157,7 @@
     </div>
 
     <!--COLUMNS FOR CONTENT-->
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <div class="col-md-6 p-heading divider">
                 <h3 class="Title">
@@ -81,36 +194,58 @@
             </div>
         </div>
     </div>
-
-    <!--GALLERY-->
-    <div class="row">
-        <div class="col-md-3 col-sm-10 mx-auto">
-            <div class="card">
-                <img src="img/uiux.jpg" class="card-img-top" alt="uiux">
-                <div class="card-body">
-                    <h5 class="card-title">User Experience and Interface Design</h5>
+    <br>
+    <hr class="hr-pdcontent">
+    <br>
+    <div class="container">
+        <div class="row ">
+            <section class="section">
+                <h1 style="color: whitesmoke;">Gallery</h1>
+                <br>
+                <div class="grid6">
+                    <div class="item6 item--mediumBig">
+                        <div class="item__details">
+                            login
+                        </div>
+                    </div>
+                    <div class="item6 item--mediumBig">
+                        <div class="item__details">
+                            home 
+                        </div>
+                    </div>
+                    <div class="item6 item--mediumBig">
+                        <div class="item__details">
+                            loan application
+                        </div>
+                    </div>
+                    <div class="item6 item--mediumBig">
+                        <div class="item__details">
+                            Filter PG-13 Movies
+                        </div>
+                    </div>
+                    <div class="item6 item--mediumBig">
+                        <div class="item__details">
+                            Edit Movie
+                        </div>
+                    </div>
+                    <div class="item6 item--mediumBig">
+                        <div class="item__details">
+                            Delete Movie Alert
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
-
-        <div class="col-md-3 col-sm-10 mx-auto">
-            <div class="card">
-                <img src="img/ios.jpg" class="card-img-top" alt="ios app devt">
-                <div class="card-body">
-                    <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-10 mx-auto">
-            <div class="card">
-                <img src="img/js.jpg" class="card-img-top" alt="javascript">
-                <div class="card-body">
-                    <h5 class="card-title">Front-end Javascript Frameworks</h5>
-                </div>
+        <br><br>
+        <div class="container video-position">
+            <div class="row video-size">
+                <video controls>
+                    <source src="videos/moviesapp.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>
+    </div>
+<br>
 
     <!--FOOTER-->
     <footer class="foot dark-theme">

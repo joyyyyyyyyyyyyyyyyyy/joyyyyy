@@ -12,8 +12,12 @@
     <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="styles/footer.css" />
     <link rel="stylesheet" type="text/css" href="styles/banner.css" />
-    <link rel="stylesheet" type="text/css" href="styles/content.css" />
+    <link rel="stylesheet" type="text/css" href="styles/exptypo.css" />
     <style>
+.item:nth-of-type(1n) {
+  background-image: url('images/illustrations/typo-poster.png');
+}
+
     </style>
 </head>
 
@@ -47,7 +51,7 @@
     </div>
 
     <!--COLUMNS FOR CONTENT-->
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <div class="col-md-6 p-heading divider">
                 <h3 class="Title">
@@ -71,37 +75,31 @@
             </div>
         </div>
     </div>
+    
+    <br>
+    <hr class="hr-pdcontent">
+    <br>
 
     <!--GALLERY-->
-    <div class="row">
-        <div class="col-md-3 col-sm-10 mx-auto">
-            <div class="card">
-                <img src="img/uiux.jpg" class="card-img-top" alt="uiux">
-                <div class="card-body">
-                    <h5 class="card-title">User Experience and Interface Design</h5>
+    <div class="container">
+        <div class="row ">
+            <section class="section">
+                <h1 style="color: whitesmoke;">Gallery</h1>
+                <br>
+                <div class="grid6">
+                    <div class="item item--medium">
+                        <div class="item__details">
+                            typography poster in a shape of a rose
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
-
-        <div class="col-md-3 col-sm-10 mx-auto">
-            <div class="card">
-                <img src="img/ios.jpg" class="card-img-top" alt="ios app devt">
-                <div class="card-body">
-                    <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-10 mx-auto">
-            <div class="card">
-                <img src="img/js.jpg" class="card-img-top" alt="javascript">
-                <div class="card-body">
-                    <h5 class="card-title">Front-end Javascript Frameworks</h5>
-                </div>
-            </div>
-        </div>
+        <br><br>
     </div>
+    </div>
+<br>
 
+    
     <!--FOOTER-->
     <footer class="foot dark-theme">
         <div class="footer-left">
