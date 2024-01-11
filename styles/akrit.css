@@ -20,7 +20,7 @@
 
 .grid6 {
     display: grid;
-    grid-gap: 90px;
+    grid-gap: 80px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 150px;
     grid-auto-flow: row dense;

@@ -12,116 +12,26 @@
     <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="styles/footer.css" />
     <link rel="stylesheet" type="text/css" href="styles/banner.css" />
-    <link rel="stylesheet" type="text/css" href="styles/content.css" />
+    <link rel="stylesheet" type="text/css" href="styles/movieapp.css" />
     <style>
-        .p-heading,
-.p-description {
-  margin-top: 8%;
-  padding: 5% 5% 0% 5%;
-  color: whitesmoke;
-}
-.divider {
-  border-right: 2px solid whitesmoke;
-}
-.title-name {
-  color: whitesmoke 80%;
+.item:nth-of-type(1n) {
+  background-image: url('images/illustrations/movieapp1.jpg');
 }
 
-.hr-pdcontent {
-  width: 95%;
-  margin: 0 auto;
+.item:nth-of-type(2n) {
+  background-image: url('images/illustrations/movieapp2.jpg');
 }
 
-.grid6 {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 150px;
-  grid-auto-flow: row dense;
+.item:nth-of-type(3n) {
+  background-image: url('images/illustrations/movieapp3.jpg');
 }
 
-.item6 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  color: whitesmoke;
-  grid-column-start: auto;
-  grid-row-start: auto;
-  color: whitesmoke;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  counter-increment: item-counter;
+.item:nth-of-type(4n) {
+  background-image: url('images/illustrations/movieapp4.jpg');
 }
 
-.item6:nth-of-type(1n) {
-  background-image: url('images/FINTECH MOBILE APP_LOAN APP/Login.png');
-}
-
-.item6:nth-of-type(2n) {
-  background-image: url('images/FINTECH MOBILE APP_LOAN APP/main pg.png');
-}
-
-.item6:nth-of-type(3n) {
-  background-image: url('images/FINTECH MOBILE APP_LOAN APP/Loan\ Apply.png');
-}
-
-.item6:nth-of-type(4n) {
-  background-image: url('Images/Android_filtermovie.PNG');
-}
-
-.item6:nth-of-type(5n) {
-  background-image: url('Images/Android_editmovie.PNG');
-}
-
-.item6:nth-of-type(6n) {
-  background-image: url('Images/Android_alert.PNG');
-}
-
-
-.item6:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.3;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.item6:hover {
-  transform: scale(1.05);
-}
-
-.item6:after {
-  opacity: 0;
-}
-
-.item--mediumBig {
-  grid-row-end: span 3;
-}
-
-.item__details {
-  position: relative;
-  z-index: 0;
-  padding: 15px;
-  color: #444;
-  background: #fff;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  color: #828282;
-}
-
-.video-size-landscape {
-  width: 70%;
-}
-
-.video-position {
-  justify-content: center;
-  display: flex;
+.item:nth-of-type(5n) {
+  background-image: url('images/illustrations/movieapp5.jpg');
 }
 
     </style>
@@ -157,128 +67,78 @@
     </div>
 
     <!--COLUMNS FOR CONTENT-->
-    <!-- <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 p-heading divider">
-                <h3 class="Title">
-                    CATEGORY: <span class="title-name">
-                        APP DEVELOPMENT
-                    </span>
-                </h3><br>
-                <h3 class="Title">
-                    SOFTWARE: <span class="title-name">
-                        ANDROID STUDIO
-                    </span>
-                </h3><br>
-                <h3 class="Title">
-                    YEAR: <span class="title-name">
-                        2023
-                    </span>
-                </h3><br>
-                <h3 class="Title">
-                    LANGUAGE: <span class="title-name">
-                        JAVA
-                    </span>
-                </h3><br>
-            </div>
-            <div class="col-md-6 p-description">
-                Developed a simple movie list app that allows users to add/delete/edit/update movies as well as
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 p-heading divider">
+            <h3 class="Title">
+                CATEGORY: <span class="title-name">
+                    APP DEVELOPMENT
+                </span>
+            </h3><br>
+            <h3 class="Title">
+                SOFTWARE: <span class="title-name">
+                    ANDROID STUDIO
+                </span>
+            </h3><br>
+            <h3 class="Title">
+                YEAR: <span class="title-name">
+                    2023
+                </span>
+            </h3><br>
+        </div>
+        <div class="col-md-6 p-description">
+            Developed a simple movie list app that allows users to add/delete/edit/update movies as well as
                 filter out PG-13 movies.
-            </div>
-            <div class="mt-4">
-                <a href="https://github.com/joyyyyyyyyyyyyyyyyyy/moremovies_l12"  target="_blank"
+        </div>
+        <div class="mt-4">
+            <a href="https://github.com/joyyyyyyyyyyyyyyyyyy/moremovies_l12"  target="_blank"
                     class="btn btn-right">view source code</a>
-            </div>
         </div>
     </div>
-    <hr class="hr-pdcontent mt-4" style="color: white; width: 90%; margin-left: auto; margin-right: auto;"> -->
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 p-heading divider">
-                <h3 class="Title">
-                    CATEGORY: <span class="title-name">
-                        UI/UX DESIGN
-                    </span>
-                </h3><br>
-                <h3 class="Title">
-                    SOFTWARE: <span class="title-name">
-                        FIGMA
-                    </span>
-                </h3><br>
-                <h3 class="Title">
-                    YEAR: <span class="title-name">
-                        2023
-                    </span>
-                </h3><br>
-            </div>
-            <div class="col-md-6 p-description">
-                A micro-lending platform accessible on mobile phones and targetted at unbanked youths in Vietnam.
-                Users can sign up as lenders/borrowers, with borrowers required to complete a financial 
-                literacy course and link an e-wallet. Borrowers form groups of 5-6, determining loan amounts 
-                based on average credit scores. Lenders can contribute a maximum of $100 each, minimizing risks 
-                through group lending.
-            </div>
-            <div class="mt-4">
-                <a href="https://shorturl.at/pCI04" target="_blank"
-                    class="btn btn-right">Live Demo</a>
-                <a href="pdf/polyfintech pitch.pdf" target="_blank" class="btn btn-right">Pitch Slides</a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <hr class="hr-pdcontent">
-    <br>
-    <div class="container">
-        <div class="row ">
-            <section class="section">
-                <h1 style="color: whitesmoke;">Gallery</h1>
-                <br>
-                <div class="grid6">
-                    <div class="item6 item--mediumBig">
-                        <div class="item__details">
-                            login
-                        </div>
-                    </div>
-                    <div class="item6 item--mediumBig">
-                        <div class="item__details">
-                            home 
-                        </div>
-                    </div>
-                    <div class="item6 item--mediumBig">
-                        <div class="item__details">
-                            loan application
-                        </div>
-                    </div>
-                    <div class="item6 item--mediumBig">
-                        <div class="item__details">
-                            Filter PG-13 Movies
-                        </div>
-                    </div>
-                    <div class="item6 item--mediumBig">
-                        <div class="item__details">
-                            Edit Movie
-                        </div>
-                    </div>
-                    <div class="item6 item--mediumBig">
-                        <div class="item__details">
-                            Delete Movie Alert
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <br><br>
-        <div class="container video-position">
-            <div class="row video-size">
-                <video controls>
-                    <source src="videos/moviesapp.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
-    </div>
+<br>
+<hr class="hr-pdcontent">
 <br>
 
+<!--GALLERY-->
+<div class="container">
+    <div class="row ">
+        <section class="section">
+            <h1 style="color: whitesmoke;">Gallery</h1>
+            <br>
+            <div class="grid6">
+                <div class="item item--mediumBig">
+                    <div class="item__details">
+                        add movie
+                    </div>
+                </div>
+                <div class="item item--mediumBig">
+                    <div class="item__details">
+                        home
+                    </div>
+                </div>
+                <div class="item item--mediumBig">
+                    <div class="item__details">
+                        loan
+                    </div>
+                </div>
+                <div class="item item--mediumBig">
+                    <div class="item__details">
+                        filter pg-13 movies
+                    </div>
+                </div>
+                <div class="item item--mediumBig">
+                    <div class="item__details">
+                        update movies
+                    </div>
+                </div>
+            </div>
+    </div>
+    <br><br>
+</div>
+</div>
+<br>
 
     <!--FOOTER-->
     <footer class="foot dark-theme">
