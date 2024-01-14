@@ -34,10 +34,10 @@
 
 }
   
-  .btn-right {
-    float: right;
-    margin-top: 0px;
-  }
+.btn-right {
+  float: left;
+  margin-top: 20px;
+}
 
   .p-heading,
 .p-description {
@@ -51,6 +51,10 @@
   font-size: 20px;
 }
 
-.title-name {
-  color: rgb(245, 245, 245);
+.desc {
+  color:  whitesmoke;
+}
+
+.Title1 {
+  color: rgb(175, 238, 238, 0.8);
 }
