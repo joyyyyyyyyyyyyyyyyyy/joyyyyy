@@ -10826,7 +10826,8 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/1330483.png");
+  /* background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/images.jpeg"); */
+  background-image: url("../assets/img/1330483.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
