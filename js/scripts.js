@@ -20,14 +20,14 @@ var typed = new Typed(typingElement, {
     loop: true
 });
 
-window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('mainNav');
-    var header = document.querySelector('header');
-    var headerHeight = header.offsetHeight;
+// window.addEventListener('scroll', function() {
+//     var navbar = document.getElementById('mainNav');
+//     var header = document.querySelector('header');
+//     var headerHeight = header.offsetHeight;
 
-    if (window.pageYOffset > headerHeight) {
-        navbar.classList.add('sticky-top');
-    } else {
-        navbar.classList.remove('sticky-top');
-    }
-});
+//     if (window.pageYOffset > headerHeight) {
+//         navbar.classList.add('sticky-top');
+//     } else {
+//         navbar.classList.remove('sticky-top');
+//     }
+// });

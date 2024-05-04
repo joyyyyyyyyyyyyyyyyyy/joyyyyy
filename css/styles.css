@@ -10878,8 +10878,14 @@ p {
   font-weight: 100;
 }
 
+.section-heading .section-heading-lower-text {
+  display: block;
+  font-size: 3rem;
+  font-weight: 90;
+}
+
 .bg-faded {
-  background-color: #f6e1c5;
+  background-color: #FFFDD0;
 }
 
 .btn-xl {
@@ -10946,7 +10952,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: rgba(112, 164, 167, 0.5);
 }
 .cta .cta-inner {
   position: relative;
@@ -10961,7 +10967,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  border: 0.3rem solid rgba(255, 253, 208, 0.85);
   z-index: -1;
 }
 
