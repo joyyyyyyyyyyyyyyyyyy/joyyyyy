@@ -11012,7 +11012,7 @@ p {
   .product-item .product-item-img {
     position: relative;
     z-index: 0;
-    max-width: 60vw;
+    max-width: 80vw;
   }
   .product-item .product-item-description {
     position: relative;
