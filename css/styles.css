@@ -11045,3 +11045,29 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+
+
+/* Base styles (apply to all screen sizes) */
+.work-heading .work-heading-content {
+  margin: 0 auto; /* Center horizontally on all screens */
+}
+
+.work-heading .col-7,
+.work-heading .col-8 {
+  margin: 0.5rem; /* Add some margin between boxes and container edges */
+}
+
+/* Media query for smaller screens */
+/* @media (max-width: 992px) { */
+  /* Stack the boxes vertically on smaller screens */
+  /* .page-section .d-flex {
+    flex-direction: column;
+  } */
+
+  /* Remove margin on smaller screens to avoid extra space */
+  /* .page-section .col-7,
+  .page-section .col-8 {
+    margin: 0;
+  }
+} */
