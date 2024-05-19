@@ -10860,8 +10860,8 @@ p {
 }
 
 .page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .section-heading {
@@ -11031,10 +11031,10 @@ p {
   margin-bottom: 1rem;
   font-style: italic;
 }
-.list-hours .list-hours-item.today {
+/* .list-hours .list-hours-item.today {
   font-weight: bold;
   color: #e6a756;
-}
+} */
 @media (min-width: 992px) {
   .list-hours {
     width: 50%;
