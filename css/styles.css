@@ -7783,8 +7783,8 @@ textarea.form-control-lg {
 }
 
 .py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .pt-0 {
@@ -11090,6 +11090,7 @@ p {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e6a756;
   --bs-btn-disabled-border-color: #e6a756;
+
 }
 
 /* live (devt) */
