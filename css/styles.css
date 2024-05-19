@@ -10890,11 +10890,11 @@ p {
 
 .btn-xl {
   font-weight: 700;
-  font-size: 0.8rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 #mainNav {
@@ -11090,7 +11090,6 @@ p {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e6a756;
   --bs-btn-disabled-border-color: #e6a756;
-  font-size: 15px;
 }
 
 /* live (devt) */
@@ -11109,5 +11108,4 @@ p {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e6a756;
   --bs-btn-disabled-border-color: #e6a756;
-  font-size: 15px;
 }
