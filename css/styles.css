@@ -11110,3 +11110,19 @@ p {
   --bs-btn-disabled-bg: #e6a756;
   --bs-btn-disabled-border-color: #e6a756;
 }
+
+.section-heading-desc {
+  text-transform: initial;
+}
+
+.section-heading-category {
+  text-transform: initial;
+}
+
+.section-heading-lang {
+  text-transform: initial;
+}
+
+.section-heading-year {
+  text-transform: initial;
+}
