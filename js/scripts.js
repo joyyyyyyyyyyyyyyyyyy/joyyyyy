@@ -31,3 +31,26 @@ var typed = new Typed(typingElement, {
 //         navbar.classList.remove('sticky-top');
 //     }
 // });
+
+
+// function openModal(image) {
+//     // Create a modal element
+//     var modal = document.createElement('div');
+//     modal.className = 'modal';
+    
+//     // Create an image element to display the larger image
+//     var modalImg = document.createElement('img');
+//     modalImg.src = image.src;
+//     modalImg.alt = image.alt;
+    
+//     // Append the image to the modal
+//     modal.appendChild(modalImg);
+    
+//     // Append the modal to the body
+//     document.body.appendChild(modal);
+    
+//     // Close the modal when clicked outside of the image
+//     modal.onclick = function() {
+//       modal.remove();
+//     };
+//   }
