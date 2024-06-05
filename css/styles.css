@@ -11014,11 +11014,11 @@ p {
     z-index: 0;
     max-width: 80vw;
   }
-  /* .product-item .product-item-exp {
+  .product-item .product-item-exp {
     position: relative;
     z-index: 0;
     max-width: 62.9vw;
-  } */
+  }
   .product-item .product-item-description {
     position: relative;
     z-index: 1;
