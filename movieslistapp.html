@@ -14,6 +14,88 @@
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Font Awesome Icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <style>
+            * {box-sizing: border-box}
+            .mySlides {display: none}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+              max-width: 1000px;
+              position: relative;
+              margin: auto;
+            }
+    
+            /* Center the images inside the slideshow */
+            .mySlides img {
+              display: block;
+              margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              padding: 16px;
+              color: white;
+              font-weight: bold;
+              font-size: 18px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+              user-select: none;
+            }
+    
+            /* Position the "prev button" to the left */
+            .prev {
+              left: 0;
+              border-radius: 3px 0 0 3px;
+            }
+    
+            /* Position the "next button" to the right */
+            .next {
+              right: 0;
+              border-radius: 3px 0 0 3px;
+            }
+    
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+              background-color: rgba(0,0,0,0.8);
+            }
+    
+            /* Caption text */
+            .text {
+              color: #f2f2f2;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center;
+            }
+    
+            /* The dots/bullets/indicators */
+            .dot {
+              cursor: pointer;
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+    
+            .active, .dot:hover {
+              background-color: #717171;
+            }
+    
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+              .prev, .next,.text {font-size: 11px}
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -40,17 +122,6 @@
                 </div>
             </div>
         </nav>
-        
-        <!-- <section class="page-section cta">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-9 mx-auto">
-                        <div class="cta-inner bg-faded text-center rounded">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
         <section class="page-section work-heading">
             <div class="col-xl-9 col-lg-10 mx-auto justify-content-center d-flex work-heading-content">
@@ -89,23 +160,54 @@
                     <a class="btn btn-sourcecode btn-xl" href="https://github.com/joyyyyyyyyyyyyyyyyyy/moremovies_l12/tree/master" target="_blank">View Source Code</a>
                     <a class="btn btn-livedemo btn-xl" href="https://drive.google.com/file/d/1mSiJ-jQa9TvNi9ZJYsQ3LpyNs8MuWyef/view?usp=sharing" target="_blank">View Demo</a>
                 </div>
-                <!-- <div class="col-8 bg-faded rounded p-5" >
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-lower">SOI Learning Portal</span>
-                    </h2>
-                    <p class="mb-0">
-                        The School of Infocomm (SOI) Learning Portal is an online catalogue of various lessons ranging from coding to 
-                        UI/UX design lessons that provides you with an easy way to sign up for various courses that would best fit 
-                        your interest and learning needs.
-                    </p><br>
-                    <a class="btn btn-primary btn-xl" href="soi learning portal.html">View More</a>
-                </div> -->
             </div>
         </section>
 
         <h2 class="site-heading text-center text-faded d-none d-lg-block">
           <span class="site-heading-lower"><b>Gallery</b></span>
       </h2>
+
+      <div class="slideshow-container">
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">1 / 3</div> -->
+          <img src="assets/img/development/moviesapp1(insertnewmovie).jpg" style="width:30%">
+          <div class="text">Insert Movie Page</div>
+        </div>
+        
+        <div class="mySlides">
+          <img src="assets/img/development/moviesapp2(showlist).jpg" style="width:30%">
+          <div class="text">Show Movies Page</div>
+        </div>
+        
+        <div class="mySlides">
+          <img src="assets/img/development/moviesapp3(edit).jpg" style="width:30%">
+          <div class="text">Edit Movie Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesapp4(cancelchange).jpg" style="width:30%">
+            <div class="text">Cancel changes dialog box</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesapp5(deletemovie).jpg" style="width:30%">
+            <div class="text">Delete Movie dialog box</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
         
         <footer class="footer text-faded text-center py-5">
           <div class="container"><p class="m-0 small">Copyright &copy; Joy Poh. All rights reserved. 2024</p></div><br>
@@ -118,5 +220,35 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
     </body>
 </html>
