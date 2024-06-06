@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>movies review website</title>
+    <link rel="icon" type="image/x-icon" href="assets/PDlogo.png" />
+    <!-- Google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* body {font-family: Verdana, sans-serif; margin:0} */
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "prev button" to the left */
+        .prev {
+            left: -50px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: -50px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <!-- <span class="site-heading-upper text-primary mb-3">A Free Bootstrap Business Theme</span> -->
+            <span class="site-heading-lower">movies review website</span>
+        </h1>
+    </header>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Joy's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase"
+                            href="experience.html">Experiences</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+    <section class="page-section work-heading">
+        <div class="col-xl-9 col-lg-10 mx-auto justify-content-center d-flex work-heading-content">
+            <div class="col-12 bg-faded rounded p-5">
+                <!-- Add the breadcrumb link here -->
+                <div style="text-align: right; margin-bottom: 10px;">
+                    <a href="development.html" style="font-size: 20px; text-decoration: underline;">&lt;
+                        Back</a>
+                </div>
+                <h4 class="section-heading mb-4">
+                    <span class="section-heading-lower-text">Category:</span>
+                    <span class="section-heading-category"> Web Development</span>
+                </h4>
+                <h4 class="section-heading mb-4">
+                    <span class="section-heading-lower-text">Language:</span>
+                    <span class="section-heading-lang">PHP, MySQl, HTML, CSS, Javascript</span>
+                </h4>
+                <h4 class="section-heading mb-4">
+                    <span class="section-heading-lower-text">Year:</span>
+                    <span class="section-heading-year">2023</span>
+                </h4>
+                <!-- <p class="mb-0">
+                    </p> -->
+                <h4 class="section-heading mb-4">
+                    <span class="section-heading-lower-text">Description:</span>
+                    <span class="section-heading-desc">Introduction:</span><br>
+                    <span class="section-heading-desc" style="font-size: 18px;">
+                        This website allows users to view and review movies, as well as view the trailer of the movie.
+                        It is also able to check who is logged in using cookies. Login details can also be saved for easier login
+                        when a user logs out. Cybersecurity features such as hashing and prevention of SQL injections are also being
+                        implemented in the website.
+                    </span><br><br>
+                    <span class="section-heading-desc">Key Features:</span><br>
+                    <span class="section-heading-desc" style="font-size: 18px;">
+                        - User registration & login<br>
+                        - User who are registered can login to their account to update their information<br>
+                        - Display list of movies & details<br>
+                        - Users are able to write/edit/delete their own reviews [only for registered users]<br>
+                        - Light/Dark mode, allows users to choose their preferred mode for viewing<br>
+                    </span><br>
+                    <span class="section-heading-desc">Development:</span><br>
+                    <span class="section-heading-desc" style="font-size: 18px;">
+                        <!-- This website was built using PHP, MySQL, HTML, CSS, and JavaScript. It includes features such as user 
+                        registration and login functionalities, allowing users to securely create accounts, log in, and manage 
+                        their personal information. Registered users can update their details and choose to deactivate or 
+                        delete their accounts. Additionally, the site displays a list of movies from a database, presenting 
+                        key information like movie title, poster image, and genre, with advanced features like sorting, 
+                        categorization, and a search bar for enhanced user experience. Furthermore, users can access movie 
+                        reviews, including details like the username of the reviewer, review content, posting date, and movie 
+                        rating. Advanced functionalities enable users to write, edit, or delete their reviews, with 
+                        authentication required for such actions. -->
+
+                        This website was built using PHP, MySQL, HTML, CSS, and JavaScript. It includes features such as user 
+                        registration and login functionalities, allowing users to securely create accounts, log in, and manage 
+                        their personal information. Registered users can update their details and choose to edit or delete their 
+                        accounts. Additionally, the site displays a list of movies from a database, presenting key information 
+                        like movie title, poster image, genre,, and trailer. Furthermore, users can access movie reviews, 
+                        including details like the username of the reviewer, review content, posting date, and movie rating.
+                        
+                        
+                        <!-- The libraries used in this projects were anime.js 
+                        for the animations, fullPage.js and Bootstrap for the layout. Animations is used to enhance the user 
+                        experience by transitioning smoothly between sections and elements, creating a visually appealing and 
+                        engaging interface. fullPage.js is used to create a single-page website by dividing the contents into 
+                        3 distinct sections. Bootstrap is used to ensure the responsiveness of the design, providing a consistent 
+                        look across various screen sizes. -->
+                    </span><br>
+                    <!-- <span class="section-heading-desc">Final Thoughts:</span><br>
+                        <span class="section-heading-desc" style="font-size: 18px;">
+                            Overall, 
+
+                            Reflecting on the MovieCube SG project, the incorporation of Bootstrap elements not only led to the 
+                            development of a feature-rich movie review platform but also expanded my proficiency in web development. 
+                            This project represents a culmination of learning, problem-solving, and successful implementation of 
+                            technologies for an engaging and functional web application.
+
+
+                        </span><br><br> -->
+                </h4>
+                <a class="btn btn-sourcecode btn-xl" href="https://github.com/joyyyyyyyyyyyyyyyyyy/movies-review" target="_blank">View Source Code</a>
+                <!-- <a class="btn btn-livedemo btn-xl" href="#" target="_blank">Live Demo</a> -->
+            </div>
+        </div>
+    </section>
+
+    <h2 class="site-heading text-center text-faded d-none d-lg-block">
+        <span class="site-heading-lower"><b>Gallery</b></span>
+    </h2>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="assets/img/development/moviesreview1(login).png" style="width:100%">
+            <div class="text">Login Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview2(register).png" style="width:100%">
+            <div class="text">Register Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview3(viewmovies).png" style="width:100%">
+            <div class="text">View Movies Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview4(accountinfo).png" style="width:100%">
+            <div class="text">Account Information Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview5(editacc).png" style="width:100%">
+            <div class="text">Edit Account Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview6(deleteacc).png" style="width:100%">
+            <div class="text">Delete Account Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview7(movieinfo).png" style="width:100%">
+            <div class="text">Movie Information Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview8(review).png" style="width:100%">
+            <div class="text">Reviews Page</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesreview9(addreview).png" style="width:100%">
+            <div class="text">Add Review Page</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+    </div>
+
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <p class="m-0 small">Copyright &copy; Joy Poh. All rights reserved. 2024</p>
+        </div><br>
+        <a href="index.html" style="color: #f6e1c5;">Home</a> | <a href="about.html" style="color: #f6e1c5;">About</a> |
+        <a href="experience.html" style="color: #f6e1c5;">Experiences</a> |
+        <a href="projects.html" style="color: #f6e1c5;">Projects</a> |
+        <a href="contact.html" style="color: #f6e1c5;">Contact</a>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
