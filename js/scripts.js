@@ -12,7 +12,7 @@
 
 var typingElement = document.querySelector('.typing');
 var typed = new Typed(typingElement, {
-    //strings: ["Student", "Web Developer", "UI/UX Designer", "Cybersecurity Enthusiast"],
+    // strings: ["Student", "Web Developer", "UI/UX Designer", "Cybersecurity Enthusiast"],
     strings: ["Student", "Web Developer", "UI/UX Designer"],
     typeSpeed: 100,
     backSpeed: 100,
