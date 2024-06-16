@@ -113,9 +113,10 @@
         .hex img {
             left: -100%;
             right: -100%;
-            width: auto;
+            width: 100%;
             height: 100%;
             margin: 0 auto;
+            object-fit: cover;
         }
     
         .hex h1,
@@ -126,6 +127,20 @@
             font-weight: 300;
             opacity: 0;
         }
+
+/* .hex h1,
+.hex p {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+    font-weight: 300;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} */
     
         #demo1 {
             color: #F5CE95;
@@ -296,9 +311,6 @@
                 font-size: 8px;
             }
     
-    
-    
-    
         }
     </style>
 </head>
@@ -321,10 +333,8 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase"
-                            href="experience.html">Experiences</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="projects.html">Projects</a>
-                    </li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="experience.html">Experiences</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="projects.html">Projects</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -357,59 +367,59 @@
 
     <div class="grid">
         <ul id="hexGrid">
-          <li class="hex">
-            <div class="hexIn">
-              <a class="hexLink" href="#">
-                <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
-                <h1 id="demo1">Girls' Brigade</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
-            </div>
-          </li>
+            <li class="hex">
+                <div class="hexIn">
+                  <div class="hexLink" href="#">
+                    <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
+                    <h1 id="demo1">Girls'Brigade</h1>
+                    <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                  </div>
+                </div>
+              </li>
             
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <div class="hexLink" href="#">
                 <div class='img'><img src="assets/img/experiences/neesoon1.jpg"></div>
                 <h1 id="demo1">This is a title</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <div class="hexLink" href="#">
                 <div class='img'><img src="assets/img/experiences/PFopening.jpg"></div>
                 <h1 id="demo1">Polytechnic Forum 2023</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <div class="hexLink" href="#">
                 <div class='img'><img src="assets/img/experiences/YFD.jpg"></div>
                 <h1 id="demo1">Youths' Future Dialogue 2023</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <div class="hexLink" href="#">
                 <div class='img'><img src="assets/img/experiences/newrelics(gitexco23).jpg"></div>
                 <h1 id="demo1">Girls in Tech</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
-             <div class='img'></div>
-                <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
+              <div class="hexLink" href="#">
+             <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
+                <h1 id="demo1">ISC2 Chapter Youth Wing Secure Your Future</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           <li class="hex">
@@ -423,20 +433,20 @@
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <div class="hexLink" href="#">
                 <div class='img'></div>
                 <h1 id="demo1">This is a title</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <div class="hexLink" href="#">
                 <div class='img'></div>
                 <h1 id="demo1">This is a title</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </a>
+              </div>
             </div>
           </li>
           
