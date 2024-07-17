@@ -227,87 +227,146 @@
         
     
         /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-        @media (min-width:1201px) {
+        /* @media (min-width:1201px) { */
     
             /* <- 5-4  hexagons per row */
-            #hexGrid {
+            /* #hexgrid {
                 padding-bottom: 4.4%
             }
     
-            .hex {
-                width: 20%;
+            .hex { */
+                /* width: 20%; */
                 /* = 100 / 5 */
-            }
+            /* }
     
-            .hex:nth-child(9n+6) {
+            .hex:nth-child(9n+6) { */
                 /* first hexagon of even rows */
-                margin-left: 10%;
+                /* margin-left: 10%; */
                 /* = width of .hex / 2  to indent even rows */
-            }
+            /* }
         }
     
-        @media (max-width: 1200px) and (min-width:901px) {
+        @media (max-width: 1200px) and (min-width:901px) { */
     
             /* <- 4-3  hexagons per row */
-            #hexGrid {
+            /* #hexgrid {
                 padding-bottom: 5.5%;
                 font-size: 13px;
             }
     
-            .hex {
-                width: 25%;
+            .hex { */
+                /* width: 25%; */
                 /* = 100 / 4 */
-            }
+            /* }
     
-            .hex:nth-child(7n+5) {
+            .hex:nth-child(7n+5) { */
                 /* first hexagon of even rows */
-                margin-left: 12.5%;
+                /* margin-left: 12.5%; */
                 /* = width of .hex / 2  to indent even rows */
-            }
+            /* }
         }
     
-        @media (max-width: 900px) and (min-width:601px) {
+        @media (max-width: 900px) and (min-width:601px) { */
     
             /* <- 3-2  hexagons per row */
-            #hexGrid {
+            /* #hexgrid {
                 padding-bottom: 7.4%;
                 font-size: 14px;
             }
     
             .hex {
-                width: 33.333%;
+                width: 33.333%; */
                 /* = 100 / 3 */
-            }
+            /* }
     
-            .hex:nth-child(5n+4) {
+            .hex:nth-child(5n+4) { */
                 /* first hexagon of even rows */
-                margin-left: 16.666%;
+                /* margin-left: 16.666%; */
                 /* = width of .hex / 2  to indent even rows */
-            }
+            /* }
         }
     
-        @media (max-width: 600px) {
+        @media (max-width: 600px) { */
     
             /* <- 2-1  hexagons per row */
-            #hexGrid {
+            /* #hexgrid {
                 padding-bottom: 11.2%;
                 font-size: 12px;
             }
     
-            .hex {
-                width: 50%;
+            .hex { */
+                /* width: 50%; */
                 /* = 100 / 3 */
-            }
+            /* }
     
-            .hex:nth-child(3n+3) {
+            .hex:nth-child(3n+3) { */
                 /* first hexagon of even rows */
-                margin-left: 25%;
+                /* margin-left: 25%; */
                 /* = width of .hex / 2  to indent even rows */
-            }
+            /* }
         }
     
         @media (max-width: 400px) {
-            #hexGrid {
+            #hexgrid {
+                font-size: 8px;
+            }
+    
+        } */
+
+        /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+
+@media (min-width:1201px) {
+    /* <- 4-3 hexagons per row */
+    #hexGrid {
+        padding-bottom: 5.5%;
+    }
+
+    .hex {
+        width: 25%; /* = 100 / 4 */
+    }
+
+    .hex:nth-child(7n+5) {
+        /* first hexagon of even rows */
+        margin-left: 12.5%; /* = width of .hex / 2 to indent even rows */
+    }
+}
+
+@media (max-width: 1200px) and (min-width:901px) {
+    /* <- 3-2 hexagons per row */
+    #hexGrid {
+        padding-bottom: 7.4%;
+        font-size: 13px;
+    }
+
+    .hex {
+        width: 33.333%; /* = 100 / 3 */
+    }
+
+    .hex:nth-child(5n+4) {
+        /* first hexagon of even rows */
+        margin-left: 16.666%; /* = width of .hex / 2 to indent even rows */
+    }
+}
+
+@media (max-width: 600px) {
+    /* <- 2-1 hexagons per row */
+    #hexGrid {
+        padding-bottom: 11.2%;
+        font-size: 14px;
+    }
+
+    .hex {
+        width: 50%; /* = 100 / 2 */
+    }
+
+    .hex:nth-child(3n+3) {
+        /* first hexagon of even rows */
+        margin-left: 25%; /* = width of .hex / 2 to indent even rows */
+    }
+}
+
+@media (max-width: 400px) {
+            #hexgrid {
                 font-size: 8px;
             }
     
@@ -422,15 +481,6 @@
             <div class="hexIn">
               <div class="hexLink" href="#">
                 <div class='img'></div>
-                <h1 id="demo1">placeholder</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'></div>
                 <h1 id="demo1">Digital for Life Festival</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
               </div>
@@ -441,15 +491,6 @@
               <div class="hexLink" href="#">
              <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
                 <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'></div>
-                <h1 id="demo1">placeholder</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
               </div>
             </div>
