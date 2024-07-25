@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/modal.css" rel="stylesheet" />
     <!-- Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -24,25 +25,25 @@
             align-items: center;
             transform: translateY(-160%);
         }
-    
+
         .exp1-button {
             display: flex;
             justify-content: center;
             align-items: center;
             transform: translateY(-260%);
         }
-    
+
         .exp2-button {
             display: flex;
             justify-content: center;
             align-items: center;
             transform: translateY(-220%);
         }
-    
-    
+
+
         /*** HEXAGON GALLERY *****************************************************************/
-    
-    
+
+
         #hexGrid {
             display: flex;
             flex-wrap: wrap;
@@ -52,7 +53,7 @@
             font-family: sans-serif;
             list-style-type: none;
         }
-    
+
         .hex {
             position: relative;
             visibility: hidden;
@@ -63,14 +64,14 @@
             will-change: transform;
             transition: all 0.5s;
         }
-    
+
         .hex::after {
             content: '';
             display: block;
             padding-bottom: 86.602%;
             /* =  100 / tan(60) * 1.5 */
         }
-    
+
         .hexIn {
             position: absolute;
             width: 96%;
@@ -86,14 +87,14 @@
             transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
             transition: all 0.5s;
         }
-    
+
         .hexIn * {
             position: absolute;
             visibility: visible;
             outline: 1px solid transparent;
             /* fix for jagged edges in FF on hover transition */
         }
-    
+
         .hexLink {
             display: block;
             width: 100%;
@@ -105,8 +106,8 @@
             -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
             transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
         }
-    
-    
+
+
         /*** HEX CONTENT **********************************************************************/
         .hex img {
             left: -100%;
@@ -116,7 +117,7 @@
             margin: 0 auto;
             object-fit: cover;
         }
-    
+
         .hex h1,
         .hex p {
             width: 100%;
@@ -125,7 +126,7 @@
             font-weight: 300;
             opacity: 0;
         }
-    
+
         /* .hex h1,
     .hex p {
         width: 100%;
@@ -139,17 +140,18 @@
         transform: translate(-50%, -50%);
         text-align: center;
     } */
-    
+
         #demo1 {
             color: #F5CE95;
             text-transform: capitalize;
             padding-top: 35%;
             padding-bottom: 40%;
             font-size: 2.3em;
+            font-weight: 300;
             z-index: 1;
-    
+
         }
-    
+
         .hex h1:before,
         .hex h1:after {
             display: inline-block;
@@ -161,14 +163,14 @@
             transition: all 0.3s;
             text-align: center;
         }
-    
+
         #demo2 {
             top: 50%;
             text-align: center;
             text-transform: uppercase;
-    
+
         }
-    
+
         .img {
             position: absolute;
             top: 0;
@@ -181,7 +183,7 @@
             -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         }
-    
+
         .img:before,
         .img:after {
             position: absolute;
@@ -193,19 +195,19 @@
             opacity: 0;
             transition: opacity 0.5s;
         }
-    
+
         .img:before {
             background: rgba(22, 103, 137, 0.3)
         }
-    
+
         .img:after {
             /* background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent); */
             background: rgba(0, 0, 0, 0.7);
         }
-    
+
         /*** HOVER EFFECT  **********************************************************************/
-    
-    
+
+
         .hexLink:hover h1,
         .hexLink:focus h1,
         .hexLink:hover p,
@@ -213,172 +215,106 @@
             opacity: 1;
             transition: 0.8s;
         }
-    
-    
+
+
         .hexIn:hover .img:before,
         .hexIn:hover .img:after,
         .hexIn:hover .hexLink {
             opacity: 1;
         }
-    
-    
+
+
         /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-    
-    
-    
+
+
+
         /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-        /* @media (min-width:1201px) { */
-    
-        /* <- 5-4  hexagons per row */
-        /* #hexgrid {
-                    padding-bottom: 4.4%
-                }
-        
-                .hex { */
-        /* width: 20%; */
-        /* = 100 / 5 */
-        /* }
-        
-                .hex:nth-child(9n+6) { */
-        /* first hexagon of even rows */
-        /* margin-left: 10%; */
-        /* = width of .hex / 2  to indent even rows */
-        /* }
-            }
-        
-            @media (max-width: 1200px) and (min-width:901px) { */
-    
-        /* <- 4-3  hexagons per row */
-        /* #hexgrid {
-                    padding-bottom: 5.5%;
-                    font-size: 13px;
-                }
-        
-                .hex { */
-        /* width: 25%; */
-        /* = 100 / 4 */
-        /* }
-        
-                .hex:nth-child(7n+5) { */
-        /* first hexagon of even rows */
-        /* margin-left: 12.5%; */
-        /* = width of .hex / 2  to indent even rows */
-        /* }
-            }
-        
-            @media (max-width: 900px) and (min-width:601px) { */
-    
-        /* <- 3-2  hexagons per row */
-        /* #hexgrid {
-                    padding-bottom: 7.4%;
-                    font-size: 14px;
-                }
-        
-                .hex {
-                    width: 33.333%; */
-        /* = 100 / 3 */
-        /* }
-        
-                .hex:nth-child(5n+4) { */
-        /* first hexagon of even rows */
-        /* margin-left: 16.666%; */
-        /* = width of .hex / 2  to indent even rows */
-        /* }
-            }
-        
-            @media (max-width: 600px) { */
-    
-        /* <- 2-1  hexagons per row */
-        /* #hexgrid {
-                    padding-bottom: 11.2%;
-                    font-size: 12px;
-                }
-        
-                .hex { */
-        /* width: 50%; */
-        /* = 100 / 3 */
-        /* }
-        
-                .hex:nth-child(3n+3) { */
-        /* first hexagon of even rows */
-        /* margin-left: 25%; */
-        /* = width of .hex / 2  to indent even rows */
-        /* }
-            }
-        
-            @media (max-width: 400px) {
-                #hexgrid {
-                    font-size: 8px;
-                }
-        
-            } */
-    
-        /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-    
         @media (min-width:1201px) {
     
-            /* <- 4-3 hexagons per row */
-            #hexGrid {
-                padding-bottom: 5.5%;
-            }
-    
-            .hex {
-                width: 22.5%;
-                /* Original 25% * 0.9 */
-            }
-    
-            .hex:nth-child(7n+5) {
-                /* first hexagon of even rows */
-                margin-left: 11.25%;
-                /* Original 12.5% * 0.9 */
-            }
-        }
-    
-        @media (max-width: 1200px) and (min-width:601px) {
-    
-            /* <- 3-2 hexagons per row */
-            #hexGrid {
-                padding-bottom: 7.4%;
-                font-size: 13px;
-            }
-    
-            .hex {
-                width: 30%;
-                /* Original 33.333% * 0.9 */
-            }
-    
-            .hex:nth-child(5n+4) {
-                /* first hexagon of even rows */
-                margin-left: 15%;
-                /* Original 16.666% * 0.9 */
-            }
-        }
-    
-        @media (max-width: 600px) {
-    
-            /* <- 2-1 hexagons per row */
-            #hexGrid {
-                padding-bottom: 11.2%;
-                font-size: 14px;
-            }
-    
-            .hex {
-                width: 45%;
-                /* Original 50% * 0.9 */
-            }
-    
-            .hex:nth-child(3n+3) {
-                /* first hexagon of even rows */
-                margin-left: 22.5%;
-                /* Original 25% * 0.9 */
-            }
-        }
-    
-        @media (max-width: 400px) {
-            #hexgrid {
-                font-size: 8px;
-            }
-        }
+    /* <- 5-4  hexagons per row */
+    #hexGrid {
+        padding-bottom: 4.4%
+    }
+
+    .hex {
+        width: 20%;
+        /* = 100 / 5 */
+    }
+
+    .hex:nth-child(9n+6) {
+        /* first hexagon of even rows */
+        margin-left: 10%;
+        /* = width of .hex / 2  to indent even rows */
+    }
+}
+
+@media (max-width: 1200px) and (min-width:901px) {
+
+    /* <- 4-3  hexagons per row */
+    #hexGrid {
+        padding-bottom: 5.5%;
+        font-size: 13px;
+    }
+
+    .hex {
+        width: 25%;
+        /* = 100 / 4 */
+    }
+
+    .hex:nth-child(7n+5) {
+        /* first hexagon of even rows */
+        margin-left: 12.5%;
+        /* = width of .hex / 2  to indent even rows */
+    }
+}
+
+@media (max-width: 900px) and (min-width:601px) {
+
+    /* <- 3-2  hexagons per row */
+    #hexGrid {
+        padding-bottom: 7.4%;
+        font-size: 14px;
+    }
+
+    .hex {
+        width: 33.333%;
+        /* = 100 / 3 */
+    }
+
+    .hex:nth-child(5n+4) {
+        /* first hexagon of even rows */
+        margin-left: 16.666%;
+        /* = width of .hex / 2  to indent even rows */
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* <- 2-1  hexagons per row */
+    #hexGrid {
+        padding-bottom: 11.2%;
+        font-size: 12px;
+    }
+
+    .hex {
+        width: 50%;
+        /* = 100 / 3 */
+    }
+
+    .hex:nth-child(3n+3) {
+        /* first hexagon of even rows */
+        margin-left: 25%;
+        /* = width of .hex / 2  to indent even rows */
+    }
+}
+
+@media (max-width: 400px) {
+    #hexGrid {
+        font-size: 8px;
+    }
+
+}
+
     </style>
 </head>
 
@@ -400,8 +336,10 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="experience.html">Experiences</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="projects.html">Projects</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase"
+                            href="experience.html">Experiences</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="projects.html">Projects</a>
+                    </li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -424,11 +362,14 @@
                                 participation to leadership roles in service learning initiatives, engagement in student overseas 
                                 trips, representation of the school in national events, mentoring and guiding young girls in the 
                                 Girls' Brigade, to engagements with political office holders, both within and beyond campus. -->
-                                <p class="mb-0">
-                                    Here is where you can explore my extensive involvement in diverse activities, ranging from active
-                                    participation to leadership roles in service learning initiatives, representation of the school in 
-                                    national events, mentoring and guiding young girls in the Girls' Brigade, to engagements with 
-                                    political office holders, both within and beyond campus.
+                            <p class="mb-0">
+                                Here is where you can explore my extensive involvement in diverse activities, ranging
+                                from active
+                                participation to leadership roles in service learning initiatives, representation of the
+                                school in
+                                national events, mentoring and guiding young girls in the Girls' Brigade, to engagements
+                                with
+                                political office holders, both within and beyond campus.
                         </div>
                     </div>
                 </div>
@@ -437,102 +378,88 @@
     </section>
 
 
-    <div class="grid">
-        <ul id="hexGrid" style="position: relative;">
-            <li class="hex">
-                <div class="hexIn">
-                  <div class="hexLink" href="#">
-                    <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
-                    <h1 id="demo1">Girls' Brigade</h1>
-                    <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-                  </div>
-                </div>
-              </li>
-            
-          <li class="hex">
+<div class="grid">
+    <ul id="hexGrid" style="position: relative;">
+        <li class="hex">
             <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'><img src="assets/img/experiences/neesoon1.jpg"></div>
-                <h1 id="demo1">Service Learnings</h1>
+              <div class="hexLink" data-modal-id="myModal1">
+                <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
+                <h1 id="demo1">Girls' Brigade</h1>
                 <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
               </div>
             </div>
           </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'><img src="assets/img/experiences/PFopening.jpg"></div>
-                <h1 id="demo1">Polytechnic Forum 2023</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'><img src="assets/img/experiences/YFD.jpg"></div>
-                <h1 id="demo1">Minister Engagements</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'><img src="assets/img/experiences/newrelics(gitexco23).jpg"></div>
-                <h1 id="demo1">Girls in Tech</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-                <div class='img'></div>
-                <h1 id="demo1">Digital for Life Festival</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" href="#">
-             <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
-                <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-          
-        </ul>
+        
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal2">
+            <div class='img'><img src="assets/img/experiences/neesoon1.jpg"></div>
+            <h1 id="demo1">Service Learnings</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
           </div>
-
-
-    <!-- <section class="page-section">
-        <div class="container">
-            <div class="product-item text-center">
-                <video autoplay muted loop class="product-item-exp mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                    src="assets/img/SERVICELEARNING.mp4" alt="..."></video>
-                <div class="exp-button mx-auto">
-                    <a class="btn btn-primary btn-xl" href="servicelearning.html">View More</a>
-                </div>
-                <br>
-                <video autoplay muted loop class="product-item-exp mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                    src="assets/img/LEADERSHIP.mp4" alt="..."></video>
-                <div class="exp1-button mx-auto">
-                    <a class="btn btn-primary btn-xl" href="leadership.html">View More</a>
-                </div>
-                <br>
-                <video autoplay muted loop class="product-item-exp mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                    src="assets/img/OTHERS.mp4" alt="..."></video>
-                <div class="exp2-button mx-auto">
-                    <a class="btn btn-primary btn-xl" href="others.html">View More</a>
-                </div>
-            </div>
         </div>
-    </section> -->
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal3">
+            <div class='img'><img src="assets/img/experiences/PFopening.jpg"></div>
+            <h1 id="demo1">Polytechnic Forum 2023</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+          </div>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal4">
+            <div class='img'><img src="assets/img/experiences/YFD.jpg"></div>
+            <h1 id="demo1">Minister Engagements</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+          </div>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal5">
+            <div class='img'><img src="assets/img/experiences/newrelics(gitexco23).jpg"></div>
+            <h1 id="demo1">Girls in Tech</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+          </div>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal6">
+            <div class='img'></div>
+            <h1 id="demo1">Digital for Life Festival</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+          </div>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal7">
+         <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
+            <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+          </div>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <div class="hexLink" data-modal-id="myModal8">
+         <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
+            <h1 id="demo1">SOI Club</h1>
+            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+          </div>
+        </div>
+      </li>
+      
+    </ul>
+      </div>
 
-    <br>
+
+
+      <br><br>
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright &copy; Joy Poh. All rights reserved. 2024</p>
@@ -547,6 +474,151 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="js/modal.js"></script>
+
+    <!-- 1st modal -->
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">Girls'Brigade</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 2nd modal -->
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">Service Learnings</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 3rd modal -->
+    <div id="myModal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">Polytechnic Forum 2023</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 4th modal -->
+    <div id="myModal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">Minister Engagements</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 5th modal -->
+    <div id="myModal5" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">Girls in Tech</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 6th modal -->
+    <div id="myModal6" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">Digital for Life Festival</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 7th modal -->
+    <div id="myModal7" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">ISC2 Chapter Youth Wing</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
+
+    <!-- 8th modal -->
+    <div id="myModal8" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div style="text-align: center;">
+                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <h1 style="font-size: 50px;">SOI Club</h1>
+            </div>
+            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
+                This app can help a student check the information of their modules.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.<br>
+                It was made as an assignment in one of my modules and was made in 1 day.
+            </p> -->
+        </div>
+    </div>
 
 </body>
 
