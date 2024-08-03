@@ -16,6 +16,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/modal.css" rel="stylesheet" />
+    <link href="css/exp.css" rel="stylesheet" />
     <!-- Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -40,281 +41,96 @@
             transform: translateY(-220%);
         }
 
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
 
-        /*** HEXAGON GALLERY *****************************************************************/
-
-
-        #hexGrid {
-            display: flex;
-            flex-wrap: wrap;
-            width: 90%;
-            margin: 0 auto;
-            overflow: hidden;
-            font-family: sans-serif;
-            list-style-type: none;
-        }
-
-        .hex {
-            position: relative;
-            visibility: hidden;
-            outline: 1px solid transparent;
-            /* fix for jagged edges in FF on hover transition */
-            transition: all 0.5s;
-            backface-visibility: hidden;
-            will-change: transform;
-            transition: all 0.5s;
-        }
-
-        .hex::after {
-            content: '';
-            display: block;
-            padding-bottom: 86.602%;
-            /* =  100 / tan(60) * 1.5 */
-        }
-
-        .hexIn {
-            position: absolute;
-            width: 96%;
-            padding-bottom: 110.851%;
-            /* =  width / sin(60) */
-            margin: 2%;
-            overflow: hidden;
-            visibility: hidden;
-            outline: 1px solid transparent;
-            /* fix for jagged edges in FF on hover transition */
-            -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-            -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-            transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-            transition: all 0.5s;
-        }
-
-        .hexIn * {
-            position: absolute;
-            visibility: visible;
-            outline: 1px solid transparent;
-            /* fix for jagged edges in FF on hover transition */
-        }
-
-        .hexLink {
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            color: #fff;
-            overflow: hidden;
-            -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-            -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-            transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-        }
-
-
-        /*** HEX CONTENT **********************************************************************/
-        .hex img {
-            left: -100%;
-            right: -100%;
-            width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            object-fit: cover;
-        }
-
-        .hex h1,
-        .hex p {
-            width: 100%;
-            padding: 5%;
-            box-sizing: border-box;
-            font-weight: 300;
-            opacity: 0;
-        }
-
-        /* .hex h1,
-    .hex p {
-        width: 100%;
-        padding: 5%;
-        box-sizing: border-box;
-        font-weight: 300;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    } */
-
-        #demo1 {
-            color: #F5CE95;
-            text-transform: capitalize;
-            padding-top: 35%;
-            padding-bottom: 40%;
-            font-size: 2.3em;
-            font-weight: 300;
-            z-index: 1;
-
-        }
-
-        .hex h1:before,
-        .hex h1:after {
-            display: inline-block;
-            margin: 0 0.5em;
-            width: 0.25em;
-            height: 0.03em;
-            background: #ffffff;
-            vertical-align: middle;
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        #demo2 {
-            top: 50%;
-            text-align: center;
-            text-transform: uppercase;
-
-        }
-
-        .img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-position: center center;
-            background-size: cover;
-            overflow: hidden;
-            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        }
-
-        .img:before,
-        .img:after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            content: '';
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .img:before {
-            background: rgba(22, 103, 137, 0.3)
-        }
-
-        .img:after {
-            /* background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent); */
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        /*** HOVER EFFECT  **********************************************************************/
-
-
-        .hexLink:hover h1,
-        .hexLink:focus h1,
-        .hexLink:hover p,
-        .hexLink:focus p {
-            opacity: 1;
-            transition: 0.8s;
-        }
-
-
-        .hexIn:hover .img:before,
-        .hexIn:hover .img:after,
-        .hexIn:hover .hexLink {
-            opacity: 1;
-        }
-
-
-        /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-
-
-
-        /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-        @media (min-width:1201px) {
-    
-    /* <- 5-4  hexagons per row */
-    #hexGrid {
-        padding-bottom: 4.4%
-    }
-
-    .hex {
-        width: 20%;
-        /* = 100 / 5 */
-    }
-
-    .hex:nth-child(9n+6) {
-        /* first hexagon of even rows */
-        margin-left: 10%;
-        /* = width of .hex / 2  to indent even rows */
-    }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-@media (max-width: 1200px) and (min-width:901px) {
-
-    /* <- 4-3  hexagons per row */
-    #hexGrid {
-        padding-bottom: 5.5%;
-        font-size: 13px;
-    }
-
-    .hex {
-        width: 25%;
-        /* = 100 / 4 */
-    }
-
-    .hex:nth-child(7n+5) {
-        /* first hexagon of even rows */
-        margin-left: 12.5%;
-        /* = width of .hex / 2  to indent even rows */
-    }
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-@media (max-width: 900px) and (min-width:601px) {
-
-    /* <- 3-2  hexagons per row */
-    #hexGrid {
-        padding-bottom: 7.4%;
-        font-size: 14px;
-    }
-
-    .hex {
-        width: 33.333%;
-        /* = 100 / 3 */
-    }
-
-    .hex:nth-child(5n+4) {
-        /* first hexagon of even rows */
-        margin-left: 16.666%;
-        /* = width of .hex / 2  to indent even rows */
-    }
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-@media (max-width: 600px) {
-
-    /* <- 2-1  hexagons per row */
-    #hexGrid {
-        padding-bottom: 11.2%;
-        font-size: 12px;
-    }
-
-    .hex {
-        width: 50%;
-        /* = 100 / 3 */
-    }
-
-    .hex:nth-child(3n+3) {
-        /* first hexagon of even rows */
-        margin-left: 25%;
-        /* = width of .hex / 2  to indent even rows */
-    }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
-@media (max-width: 400px) {
-    #hexGrid {
-        font-size: 8px;
-    }
-
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
     </style>
 </head>
 
@@ -357,11 +173,6 @@
                                 <!-- <span class="section-heading-upper">Strong Coffee, Strong Roots</span> -->
                                 <span class="section-heading-lower">Experiences</span>
                             </h2>
-                            <!-- <p class="mb-0">
-                                Here is where you can explore my extensive involvement in diverse activities, ranging from active
-                                participation to leadership roles in service learning initiatives, engagement in student overseas 
-                                trips, representation of the school in national events, mentoring and guiding young girls in the 
-                                Girls' Brigade, to engagements with political office holders, both within and beyond campus. -->
                             <p class="mb-0">
                                 Here is where you can explore my extensive involvement in diverse activities, ranging
                                 from active
@@ -378,86 +189,86 @@
     </section>
 
 
-<div class="grid">
-    <ul id="hexGrid" style="position: relative;">
-        <li class="hex">
-            <div class="hexIn">
-              <div class="hexLink" data-modal-id="myModal1">
-                <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
-                <h1 id="demo1">Girls' Brigade</h1>
-                <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-              </div>
-            </div>
-          </li>
-        
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal2">
-            <div class='img'><img src="assets/img/experiences/neesoon1.jpg"></div>
-            <h1 id="demo1">Service Learnings</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal3">
-            <div class='img'><img src="assets/img/experiences/PFopening.jpg"></div>
-            <h1 id="demo1">Polytechnic Forum 2023</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal4">
-            <div class='img'><img src="assets/img/experiences/YFD.jpg"></div>
-            <h1 id="demo1">Minister Engagements</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal5">
-            <div class='img'><img src="assets/img/experiences/newrelics(gitexco23).jpg"></div>
-            <h1 id="demo1">Girls in Tech</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal6">
-            <div class='img'></div>
-            <h1 id="demo1">Digital for Life Festival</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal7">
-         <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
-            <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-      <li class="hex">
-        <div class="hexIn">
-          <div class="hexLink" data-modal-id="myModal8">
-         <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
-            <h1 id="demo1">SOI Club</h1>
-            <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
-          </div>
-        </div>
-      </li>
-    </ul>
-      </div>
+    <div class="grid">
+        <ul id="hexGrid" style="position: relative;">
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal1">
+                        <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
+                        <h1 id="demo1">Girls' Brigade</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
 
-      
-      <br><br>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal2">
+                        <div class='img'><img src="assets/img/experiences/neesoon1.jpg"></div>
+                        <h1 id="demo1">Service Learnings</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal3">
+                        <div class='img'><img src="assets/img/experiences/PFopening.jpg"></div>
+                        <h1 id="demo1">Polytechnic Forum 2023</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal4">
+                        <div class='img'><img src="assets/img/experiences/YFD.jpg"></div>
+                        <h1 id="demo1">Minister Engagements</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal5">
+                        <div class='img'><img src="assets/img/experiences/git(newrelics).jpg"></div>
+                        <h1 id="demo1">Girls in Tech</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal6">
+                        <div class='img'></div>
+                        <h1 id="demo1">Digital for Life Festival</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal7">
+                        <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
+                        <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <div class="hexLink" data-modal-id="myModal8">
+                        <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
+                        <h1 id="demo1">SOI Club</h1>
+                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <br>
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright &copy; Joy Poh. All rights reserved. 2024</p>
@@ -471,7 +282,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
     <script src="js/modal.js"></script>
 
     <!-- 1st modal -->
@@ -479,8 +289,27 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
-                <h1 style="font-size: 50px;">Girls' Brigade</h1>
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides1">
+                      <img src="assets/img/experiences/GB.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides1">
+                      <img src="assets/img/experiences/GBFC23(2).jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides1">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides1')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides1')">❯</a>
+                    
+                    </div>
+                    <br>
+                <h1 style="font-size: 50px;">Girls'Brigade</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
                 This app can help a student check the information of their modules.<br>
@@ -497,7 +326,26 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides2">
+                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides2">
+                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides2">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides2')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides2')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">Service Learnings</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -515,7 +363,26 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides3">
+                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides3">
+                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides3">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides3')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides3')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">Polytechnic Forum 2023</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -533,7 +400,30 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides4">
+                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides4">
+                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides4">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides4">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides4')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides4')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">Minister Engagements</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -551,7 +441,30 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides5">
+                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides5">
+                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides5">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides5">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides5')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides5')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">Girls in Tech</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -569,7 +482,30 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides6">
+                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides6">
+                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides6">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides6">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides6')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides6')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">Digital for Life Festival</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -587,7 +523,30 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides7">
+                      <img src="assets/img/experiences/isc2(1).jpg" style="width:70%;">
+                    </div>
+                    
+                    <div class="mySlides7">
+                      <img src="assets/img/experiences/isc2(syf).jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides7">
+                      <img src="assets/img/experiences/isc2(aispYS).jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides7">
+                        <img src="assets/img/experiences/isc2(2).jpg" style="width:50%">
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides7')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides7')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">ISC2 Chapter Youth Wing</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -605,7 +564,30 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div style="text-align: center;">
-                <img src="images/apps-course-mods.png" style="text-align: center; height: 40%;">
+                <!-- create a slideshow gallery -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides8">
+                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides8">
+                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    
+                    <div class="mySlides8">
+                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides8">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides8')">❮</a>
+                    <a class="next" onclick="plusSlides(1, 'mySlides8')">❯</a>
+                    
+                    </div>
+                    <br>
                 <h1 style="font-size: 50px;">SOI Club</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -617,6 +599,77 @@
             </p> -->
         </div>
     </div>
+
+
+    <script>
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    
+        let slideIndex1 = 1;
+        let slideIndex2 = 1;
+        let slideIndex3 = 1;
+        let slideIndex4 = 1;
+        let slideIndex5 = 1;
+        let slideIndex6 = 1;
+        let slideIndex7 = 1;
+        let slideIndex8 = 1;
+        showSlides(slideIndex1, 'mySlides1');
+        showSlides(slideIndex2, 'mySlides2');
+        showSlides(slideIndex3, 'mySlides3');
+        showSlides(slideIndex4, 'mySlides4');
+        showSlides(slideIndex5, 'mySlides5');
+        showSlides(slideIndex6, 'mySlides6');
+        showSlides(slideIndex7, 'mySlides7');
+        showSlides(slideIndex8, 'mySlides8');
+    
+        function plusSlides(n, slideClass) {
+            if (slideClass === 'mySlides1') {
+                showSlides(slideIndex1 += n, slideClass);
+            } else if (slideClass === 'mySlides2') {
+                showSlides(slideIndex2 += n, slideClass);
+            } else if (slideClass === 'mySlides3') {
+                showSlides(slideIndex3 += n, slideClass);
+            } else if (slideClass === 'mySlides4') {
+                showSlides(slideIndex4 += n, slideClass);
+            } else if (slideClass === 'mySlides5') {
+                showSlides(slideIndex5 += n, slideClass);
+            } else if (slideClass === 'mySlides6') {
+                showSlides(slideIndex6 += n, slideClass);
+            } else if (slideClass === 'mySlides7') {
+                showSlides(slideIndex7 += n, slideClass);
+            } else if (slideClass === 'mySlides8') {
+                showSlides(slideIndex8 += n, slideClass);
+            }
+        }
+    
+        function showSlides(n, slideClass) {
+            let slides = document.getElementsByClassName(slideClass);
+            if (n > slides.length) { n = 1; }
+            if (n < 1) { n = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[n - 1].style.display = "block";
+            if (slideClass === 'mySlides1') {
+                slideIndex1 = n;
+            } else if (slideClass === 'mySlides2') {
+                slideIndex2 = n;
+            } else if (slideClass === 'mySlides3') {
+                slideIndex3 = n;
+            } else if (slideClass === 'mySlides4') {
+                slideIndex4 = n;
+            } else if (slideClass === 'mySlides5') {
+                slideIndex5 = n;
+            } else if (slideClass === 'mySlides6') {
+                slideIndex6 = n;
+            } else if (slideClass === 'mySlides7') {
+                slideIndex7 = n;
+            } else if (slideClass === 'mySlides8') {
+                slideIndex8 = n;
+            }
+        }
+    </script>
 
 </body>
 
