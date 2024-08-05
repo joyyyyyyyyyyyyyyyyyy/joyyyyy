@@ -20,117 +20,121 @@
     <!-- Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* .exp-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translateY(-160%);
+        * {
+            box-sizing: border-box
         }
 
-        .exp1-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translateY(-260%);
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
         }
 
-        .exp2-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translateY(-220%);
-        } */
+        .mySlides {
+            display: none
+        }
 
-        * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+        img {
+            vertical-align: middle;
+        }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
     </style>
 </head>
 
@@ -174,9 +178,12 @@ img {vertical-align: middle;}
                                 <span class="section-heading-lower">Experiences</span>
                             </h2>
                             <p class="mb-0" style="font-family: lora;">
-                                Here is where you can explore my extensive involvement in diverse activities, ranging from active
-                                participation to leadership roles in service learning initiatives, representation of the school in
-                                national events, mentoring and guiding young girls in the Girls' Brigade, to engagements with
+                                Here is where you can explore my extensive involvement in diverse activities, ranging
+                                from active
+                                participation to leadership roles in service learning initiatives, representation of the
+                                school in
+                                national events, mentoring and guiding young girls in the Girls' Brigade, to engagements
+                                with
                                 political office holders, both within and beyond campus.
                             </p>
                         </div>
@@ -290,22 +297,22 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides1">
-                      <img src="assets/img/experiences/GB.jpg" style="width:50%">
+                        <img src="assets/img/experiences/GB.jpg" style="width:50%">
                     </div>
-                    
+
                     <div class="mySlides1">
-                      <img src="assets/img/experiences/GBFC23(2).jpg" style="width:50%">
+                        <img src="assets/img/experiences/GBFC23(2).jpg" style="width:50%">
                     </div>
-                    
+
                     <div class="mySlides1">
-                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                        <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
                     </div>
-                    
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides1')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides1')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">Girls' Brigade</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -327,22 +334,22 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides2">
-                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
+                        <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
                     </div>
-                    
+
                     <div class="mySlides2">
-                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
                     </div>
-                    
+
                     <div class="mySlides2">
-                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                        <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
                     </div>
-                    
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides2')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides2')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">Service Learnings</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -355,50 +362,52 @@ img {vertical-align: middle;}
         </div>
     </div>
 
-    <!-- 3rd modal -->
-    <div id="myModal3" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
+<!-- 3rd modal -->
+<div id="myModal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <h1 style="font-size: 40px; font-family: Lora; text-align: center; width: 100%;">Polytechnic Forum 2023</h1><br>
+            <div style="display: flex; align-items: flex-start;">
+                <div class="slideshow-container" style="width: 55%; margin-right: 20px;">
 
                     <div class="mySlides3">
-                      <img src="assets/img/experiences/PFRF3(macs).jpg" style="width:50%">
-                    </div>
-                    
-                    <div class="mySlides3">
-                      <img src="assets/img/experiences/PFRF3.jpg" style="width:50%">
-                    </div>
-                    
-                    <div class="mySlides3">
-                      <img src="assets/img/experiences/roomies.jpg" style="width:25%">
+                        <img src="assets/img/experiences/PFRF3(macs).jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/PFopening.jpg" style="width:50%">
+                        <img src="assets/img/experiences/PFRF3.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/PFclosing.jpg" style="width:50%">
+                        <img src="assets/img/experiences/roomies.jpg" style="width:50%">
                     </div>
-                    
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides3')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides3')">❯</a>
-                    
+
+                    <div class="mySlides3">
+                        <img src="assets/img/experiences/PFopening.jpg" style="width:100%">
                     </div>
-                    <br>
-                <h1 style="font-size: 50px; font-family: lora;">Polytechnic Forum 2023</h1>
+
+                    <div class="mySlides3">
+                        <img src="assets/img/experiences/PFclosing.jpg" style="width:100%">
+                    </div>
+
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides3')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides3')">❯</a>
+                    </div>
+
+                </div>
+                <p style="width: 45%; color: rgb(0, 0, 0); font-size: 17px;">
+                    Held from 15-22 September last year, Polytechnic Forum 2023 was a week's long programme where I have learnt many things from 
+                    the journey about creating a resilient future for Singapore, which was part of the overall Poly Forum theme, 'Our Green SG',
+                    whereby we had multiple learning journeys in both the local and overseas components. Those learning journeys in the local 
+                    component took place at Gardens by the Bay (Urban Wetland Tour) and Edible Garden City.
+                </p>
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
+</div>
+
 
     <!-- 4th modal -->
     <div id="myModal4" class="modal">
@@ -409,14 +418,14 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides4">
-                      <img src="assets/img/experiences/YFD.jpg" style="width:30%">
+                        <img src="assets/img/experiences/YFD.jpg" style="width:30%">
                     </div>
-                    
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides4')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides4')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">Minister Engagements</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -438,18 +447,18 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides5">
-                      <img src="assets/img/experiences/git(exco handover).jpeg" style="width:30%">
+                        <img src="assets/img/experiences/git(exco handover).jpeg" style="width:30%">
                     </div>
-                    
+
                     <div class="mySlides5">
-                      <img src="assets/img/experiences/git(newrelics).jpg" style="width:50%">
+                        <img src="assets/img/experiences/git(newrelics).jpg" style="width:50%">
                     </div>
-                    
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides5')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides5')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">Girls in Tech</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -471,26 +480,26 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides6">
-                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
-                    </div>
-                    
-                    <div class="mySlides6">
-                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
-                    </div>
-                    
-                    <div class="mySlides6">
-                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                        <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
                     </div>
 
                     <div class="mySlides6">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
-                      </div>
-                    
+                    </div>
+
+                    <div class="mySlides6">
+                        <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides6">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides6')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides6')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">Digital for Life Festival</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -512,26 +521,26 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides7">
-                      <img src="assets/img/experiences/isc2(1).jpg" style="width:70%;">
+                        <img src="assets/img/experiences/isc2(1).jpg" style="width:70%;">
                     </div>
-                    
+
                     <div class="mySlides7">
-                      <img src="assets/img/experiences/isc2(syf).jpg" style="width:50%">
+                        <img src="assets/img/experiences/isc2(syf).jpg" style="width:50%">
                     </div>
-                    
+
                     <div class="mySlides7">
-                      <img src="assets/img/experiences/isc2(aispYS).jpg" style="width:30%">
+                        <img src="assets/img/experiences/isc2(aispYS).jpg" style="width:30%">
                     </div>
 
                     <div class="mySlides7">
                         <img src="assets/img/experiences/isc2(2).jpg" style="width:50%">
-                      </div>
-                    
+                    </div>
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides7')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides7')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">ISC2 Chapter Youth Wing</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -553,26 +562,26 @@ img {vertical-align: middle;}
                 <div class="slideshow-container">
 
                     <div class="mySlides8">
-                      <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
-                    </div>
-                    
-                    <div class="mySlides8">
-                      <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
-                    </div>
-                    
-                    <div class="mySlides8">
-                      <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                        <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
                     </div>
 
                     <div class="mySlides8">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
-                      </div>
-                    
+                    </div>
+
+                    <div class="mySlides8">
+                        <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+
+                    <div class="mySlides8">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+
                     <a class="prev" onclick="plusSlides(-1, 'mySlides8')">❮</a>
                     <a class="next" onclick="plusSlides(1, 'mySlides8')">❯</a>
-                    
-                    </div>
-                    <br>
+
+                </div>
+                <br>
                 <h1 style="font-size: 50px; font-family: lora;">SOI Club</h1>
             </div>
             <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
@@ -590,7 +599,7 @@ img {vertical-align: middle;}
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
-    
+
         let slideIndex1 = 1;
         let slideIndex2 = 1;
         let slideIndex3 = 1;
@@ -607,7 +616,7 @@ img {vertical-align: middle;}
         showSlides(slideIndex6, 'mySlides6');
         showSlides(slideIndex7, 'mySlides7');
         showSlides(slideIndex8, 'mySlides8');
-    
+
         function plusSlides(n, slideClass) {
             if (slideClass === 'mySlides1') {
                 showSlides(slideIndex1 += n, slideClass);
@@ -627,7 +636,7 @@ img {vertical-align: middle;}
                 showSlides(slideIndex8 += n, slideClass);
             }
         }
-    
+
         function showSlides(n, slideClass) {
             let slides = document.getElementsByClassName(slideClass);
             if (n > slides.length) { n = 1; }
