@@ -53,7 +53,7 @@
             width: auto;
             padding: 16px;
             margin-top: -22px;
-            color: white;
+            color: rgb(0, 0, 0);
             font-weight: bold;
             font-size: 18px;
             transition: 0.6s ease;
@@ -61,16 +61,16 @@
             user-select: none;
         }
 
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
+        /* Position the "prev button" to the left */
+        .prev {
+            left: 20px;
             border-radius: 3px 0 0 3px;
         }
 
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        /* Position the "next button" to the right */
+        .next {
+            right: 20px;
+            border-radius: 3px 0 0 3px;
         }
 
         /* Caption text */
@@ -168,7 +168,6 @@
     <section class="page-section about-heading">
         <div class="container">
             <br><br>
-            <!-- <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/me.jpg" alt="..." /> -->
             <div class="about-heading-content">
                 <div class="row">
                     <div class="col-xl-9 col-lg-10 mx-auto">
@@ -178,12 +177,9 @@
                                 <span class="section-heading-lower">Experiences</span>
                             </h2>
                             <p class="mb-0" style="font-family: lora;">
-                                Here is where you can explore my extensive involvement in diverse activities, ranging
-                                from active
-                                participation to leadership roles in service learning initiatives, representation of the
-                                school in
-                                national events, mentoring and guiding young girls in the Girls' Brigade, to engagements
-                                with
+                                Here is where you can explore my extensive involvement in diverse activities, ranging from active
+                                participation to leadership roles in service learning initiatives, representation of the school in
+                                national events, mentoring and guiding young girls in the Girls' Brigade, to engagements with
                                 political office holders, both within and beyond campus.
                             </p>
                         </div>
@@ -201,7 +197,6 @@
                     <div class="hexLink" data-modal-id="myModal1">
                         <div class='img'><img src="assets/img/experiences/GBFC23(2).jpg"></div>
                         <h1 id="demo1">Girls' Brigade</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -210,7 +205,6 @@
                     <div class="hexLink" data-modal-id="myModal2">
                         <div class='img'><img src="assets/img/experiences/neesoon1.jpg"></div>
                         <h1 id="demo1">Service Learnings</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -219,7 +213,6 @@
                     <div class="hexLink" data-modal-id="myModal3">
                         <div class='img'><img src="assets/img/experiences/PFopening.jpg"></div>
                         <h1 id="demo1">Polytechnic Forum 2023</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -228,7 +221,6 @@
                     <div class="hexLink" data-modal-id="myModal4">
                         <div class='img'><img src="assets/img/experiences/YFD.jpg"></div>
                         <h1 id="demo1">Minister Engagements</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -237,7 +229,6 @@
                     <div class="hexLink" data-modal-id="myModal5">
                         <div class='img'><img src="assets/img/experiences/git(newrelics).jpg"></div>
                         <h1 id="demo1">Girls in Tech</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -246,7 +237,6 @@
                     <div class="hexLink" data-modal-id="myModal6">
                         <div class='img'><img src="assets/img/experiences/dfl.jpg"></div>
                         <h1 id="demo1">Digital for Life Festival</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -255,7 +245,6 @@
                     <div class="hexLink" data-modal-id="myModal7">
                         <div class='img'><img src="assets/img/experiences/isc2(syf).jpg"></div>
                         <h1 id="demo1">ISC2 Chapter Youth Wing</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
@@ -264,14 +253,11 @@
                     <div class="hexLink" data-modal-id="myModal8">
                         <div class='img'><img src="assets/img/experiences/soiclub.jpg"></div>
                         <h1 id="demo1">SOI Club</h1>
-                        <!-- <p id="demo2">Some sample text about the article this hexagon leads to</p> -->
                     </div>
                 </div>
             </li>
         </ul>
     </div>
-
-
     <br>
     <footer class="footer text-faded text-center py-5">
         <div class="container">
@@ -291,309 +277,247 @@
     <!-- 1st modal -->
     <div id="myModal1" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal1').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">Girls' Brigade</h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides1">
                         <img src="assets/img/experiences/GB.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides1">
                         <img src="assets/img/experiences/GBFC23(2).jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides1">
                         <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides1')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides1')">❯</a>
-
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides1')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">Girls' Brigade</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
 
     <!-- 2nd modal -->
     <div id="myModal2" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal2').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">Service Learnings</h1>
+                <br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides2">
                         <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides2">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides2">
                         <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides2')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides2')">❯</a>
-
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides2')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides2')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">Service Learnings</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
 
-<!-- 3rd modal -->
-<div id="myModal3" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div style="display: flex; flex-direction: column; align-items: flex-start;">
-            <h1 style="font-size: 40px; font-family: Lora; text-align: center; width: 100%;">Polytechnic Forum 2023</h1><br>
-            <div style="display: flex; align-items: flex-start;">
-                <div class="slideshow-container" style="width: 55%; margin-right: 20px;">
-
+    <!-- 3rd modal -->
+    <div id="myModal3" class="modal">
+        <div class="modal-content">
+            <span onclick="document.getElementById('myModal3').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <!-- Changed to column and centered items -->
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">Polytechnic Forum 2023
+                </h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
+                    <!-- Set width to 100% and centered text -->
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/PFRF3(macs).jpg" style="width:100%">
+                        <img src="assets/img/experiences/PFRF3(macs).jpg" style="width:50%">
+                        <!-- Images centered with consistent size -->
                     </div>
-
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/PFRF3.jpg" style="width:100%">
+                        <img src="assets/img/experiences/PFRF3.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/roomies.jpg" style="width:50%">
+                        <img src="assets/img/experiences/roomies.jpg" style="width:25%">
                     </div>
-
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/PFopening.jpg" style="width:100%">
+                        <img src="assets/img/experiences/PFopening.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides3">
-                        <img src="assets/img/experiences/PFclosing.jpg" style="width:100%">
+                        <img src="assets/img/experiences/PFclosing.jpg" style="width:50%">
                     </div>
-
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div style="text-align: center; margin-top: 10px;"> <!-- Centered navigation arrows -->
                         <a class="prev" onclick="plusSlides(-1, 'mySlides3')">❮</a>
                         <a class="next" onclick="plusSlides(1, 'mySlides3')">❯</a>
                     </div>
-
                 </div>
-                <p style="width: 45%; color: rgb(0, 0, 0); font-size: 17px;">
-                    Held from 15-22 September last year, Polytechnic Forum 2023 was a week's long programme where I have learnt many things from 
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
+                    <!-- Positioned body text below slideshow and set width to 90% -->
+                    Held from 15-22 September last year, Polytechnic Forum 2023 was a week's long programme where I have learnt many things from
                     the journey about creating a resilient future for Singapore, which was part of the overall Poly Forum theme, 'Our Green SG',
-                    whereby we had multiple learning journeys in both the local and overseas components. Those learning journeys in the local 
-                    component took place at Gardens by the Bay (Urban Wetland Tour) and Edible Garden City.
+                    whereby we had multiple learning journeys in both the local and overseas components. <br><br>
+                    Those learning journeys in the local component took place at Gardens by the Bay (Urban Wetland Tour), where I gained insights
+                    into Singapore's 'City in a Garden' vision, and understood the overall roles of various flora and fauna, such as mangroves, 
+                    which slows down water flow and filter debris, as well as pollutants. On top of that, my group also visited the Edible 
+                    Garden City, where I learnt about the importance of growing our own crops, and Singapore's ambitious 30 by 30 plan. <br><br>
+                    In the overseas component, the learning journey visit to the Desaru Fruit Farm in Malaysia, allowed for the exploration of the
+                    inherent economy and bio-farming systems. Additionally, we went on a mangrove tour, which emphasised the vital role of 
+                    mangroves in safeguarding shorelines, supporting diverse wildlife, and preserving the health of the ocean.<br><br>
+                    This 6 days programme was indeed an eye-opening experience, and the activities that I've been through during the Poly 
+                    Forum has taught me a lot on the importance of creating a resilient future for Singapore, and all of the things that we 
+                    learnt teach us that we have to take further actions ahead of time to combat the challenges ahead.
                 </p>
             </div>
         </div>
     </div>
-</div>
-
 
     <!-- 4th modal -->
     <div id="myModal4" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal4').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">Minister Engagements
+                </h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides4">
                         <img src="assets/img/experiences/YFD.jpg" style="width:30%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides4')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides4')">❯</a>
-
+                    <div class="mySlides4">
+                        <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
+                    </div>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides4')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides4')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">Minister Engagements</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
 
     <!-- 5th modal -->
     <div id="myModal5" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal5').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">Girls in Tech</h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides5">
                         <img src="assets/img/experiences/git(exco handover).jpeg" style="width:30%">
                     </div>
-
                     <div class="mySlides5">
                         <img src="assets/img/experiences/git(newrelics).jpg" style="width:50%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides5')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides5')">❯</a>
-
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides5')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides5')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">Girls in Tech</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
 
     <!-- 6th modal -->
     <div id="myModal6" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal6').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">Digital for Life
+                    Festival</h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides6">
                         <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides6">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides6">
                         <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
                     </div>
-
                     <div class="mySlides6">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides6')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides6')">❯</a>
-
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides6')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides6')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">Digital for Life Festival</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
 
     <!-- 7th modal -->
     <div id="myModal7" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal7').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">ISC2 Chapter Youth Wing
+                </h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides7">
                         <img src="assets/img/experiences/isc2(1).jpg" style="width:70%;">
                     </div>
-
                     <div class="mySlides7">
                         <img src="assets/img/experiences/isc2(syf).jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides7">
                         <img src="assets/img/experiences/isc2(aispYS).jpg" style="width:30%">
                     </div>
-
                     <div class="mySlides7">
                         <img src="assets/img/experiences/isc2(2).jpg" style="width:50%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides7')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides7')">❯</a>
-
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides7')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides7')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">ISC2 Chapter Youth Wing</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
+                    ISC2 
+                </p>
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
 
     <!-- 8th modal -->
     <div id="myModal8" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div style="text-align: center;">
-                <!-- create a slideshow gallery -->
-                <div class="slideshow-container">
-
+            <span onclick="document.getElementById('myModal8').style.display='none'" class="close">&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1 style="font-size: 50px; font-family: Lora; text-align: center; width: 100%;">SOI Club</h1><br>
+                <div class="slideshow-container" style="width: 100%; text-align: center;">
                     <div class="mySlides8">
                         <img src="assets/img/experiences/neesoon2.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides8">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
                     </div>
-
                     <div class="mySlides8">
                         <img src="assets/img/experiences/GBFC23.jpg" style="width:30%">
                     </div>
-
                     <div class="mySlides8">
                         <img src="assets/img/experiences/neesoon1.jpg" style="width:50%">
                     </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 'mySlides8')">❮</a>
-                    <a class="next" onclick="plusSlides(1, 'mySlides8')">❯</a>
-
+                    <div style="text-align: center; margin-top: 10px;">
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides8')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides8')">❯</a>
+                    </div>
                 </div>
-                <br>
-                <h1 style="font-size: 50px; font-family: lora;">SOI Club</h1>
+                <p style="width: 90%; color: rgb(0, 0, 0); font-size: 17px; margin-top: 20px;">
             </div>
-            <!-- <p style="color: rgb(0, 0, 0); font-size: 20px;">
-                This app can help a student check the information of their modules.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.<br>
-                It was made as an assignment in one of my modules and was made in 1 day.
-            </p> -->
         </div>
     </div>
-
 
     <script>
         function closeModal(modalId) {

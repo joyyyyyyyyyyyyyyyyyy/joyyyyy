@@ -12,10 +12,17 @@ function openModal(event) {
 }
 
 // Function to close the modal
+// function closeModal(event) {
+//   var modal = event.target.closest('.modal');
+//   modal.style.display = 'none';
+// }
+
+// Function to close the modal
 function closeModal(event) {
-    var modal = event.target.closest('.modal');
-    modal.style.display = 'none';
-  }
+  // Get the modal element that contains the clicked close button
+  var modal = event.target.parentElement.parentElement;
+  modal.style.display = 'none';
+}
 
 // Add event listeners to open the modals
 var hexLinks = document.querySelectorAll('.hexLink');
@@ -27,3 +34,13 @@ var hexLinks = document.querySelectorAll('.hexLink');
 closeBtns.forEach(function (btn) {
     btn.addEventListener('click', closeModal);
   });
+
+
+// Optionally, add a click event to close the modal when clicking outside of it
+// window.addEventListener('click', function(event) {
+//     modals.forEach(function(modal) {
+//         if (event.target === modal) {
+//             modal.style.display = 'none';
+//         }
+//     });
+// });
