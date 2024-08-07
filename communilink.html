@@ -14,6 +14,88 @@
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Font Awesome Icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <style>
+            * {box-sizing: border-box}
+            .mySlides {display: none}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+              max-width: 1000px;
+              position: relative;
+              margin: auto;
+            }
+    
+            /* Center the images inside the slideshow */
+            .mySlides img {
+              display: block;
+              margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              padding: 16px;
+              color: white;
+              font-weight: bold;
+              font-size: 18px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+              user-select: none;
+            }
+    
+            /* Position the "prev button" to the left */
+            .prev {
+              left: 0;
+              border-radius: 3px 0 0 3px;
+            }
+    
+            /* Position the "next button" to the right */
+            .next {
+              right: 0;
+              border-radius: 3px 0 0 3px;
+            }
+    
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+              background-color: rgba(0,0,0,0.8);
+            }
+    
+            /* Caption text */
+            .text {
+              color: #f2f2f2;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center;
+            }
+    
+            /* The dots/bullets/indicators */
+            .dot {
+              cursor: pointer;
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+    
+            .active, .dot:hover {
+              background-color: #717171;
+            }
+    
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+              .prev, .next,.text {font-size: 11px}
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -41,17 +123,6 @@
             </div>
         </nav>
 
-        <!-- <section class="page-section cta">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-9 mx-auto">
-                        <div class="cta-inner bg-faded text-center rounded">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <section class="page-section work-heading">
             <div class="col-xl-9 col-lg-10 mx-auto justify-content-center d-flex work-heading-content">
                 <div class="col-12 bg-faded rounded p-5">
@@ -74,47 +145,85 @@
                         <span class="section-heading-lower-text">Description:</span>
                         <span class="section-heading-desc">Introduction:</span><br>
                         <span class="section-heading-desc" style="font-size: 18px;">
-                            This app aims to aid primary school children in their learning, specifically in communication and teaching them how to sign in the 
+                            <!-- This app aims to aid primary school children in their learning, specifically in communication and teaching them how to sign in the 
                             alphabet to better communicate with others. The users should be able to navigate through the app easily, address their pain points, 
                             entertain the users and simultaneously allow them to learn through the app. For the app to achieve its purpose, utilising of user 
                             research, feedback and testing would be essential to ensure that the app is curated for the right target audience, which is the 
                             primary school children. The app also needs to have a user-friendly interface and content tailored to suit the needs of the users. 
-                            In this case, personalisation, gamification, and interactive elements should be added to enhance the users' engagement.
+                            In this case, personalisation, gamification, and interactive elements should be added to enhance the users' engagement. -->
 
                             CommuniLink is a prototype of an app that aims to aid primary school children in their learning, specifically in communication and 
-                            teaching them how to sign in alphabets to better communicate with others. The user 
+                            teaching them how to sign in alphabets to better communicate with others. The user should be able to navigate through the app easily, address their pain points, 
+                            entertain the users and simultaneously allow them to learn through the app. The app also needs to have a user-friendly interface and content tailored to suit the needs of the users. 
+                            In this case, personalisation, gamification, and interactive elements are added to enhance the users' engagement.
                         </span><br><br>
                         <span class="section-heading-desc">Key Features:</span><br>
                         <span class="section-heading-desc" style="font-size: 18px;">
-                            - Navigation bar with various sections such as Culture, Religion & Cuisines that are furthur split into 
-                            sub-categories for easier navigation<br>
-                            - Food Recommendations for the various cuisine<br>
+                            - Games section with 3 levels of difficulty, where users can play to help them recall what they have learnt in the training section<br>
+                            - Find location feature, helping user to find their way to school/home<br>
+                            - Training section where users can learn how to sign alphabets, numbers and feelings in sign language<br>
                             <!-- - List of Vaccination Centres with the respective location address, vaccination type & phone number<br>
                             - Includes search function to search for vaccination locations available<br> -->
                         </span><br>
                         <span class="section-heading-desc">Design/Thought Process:</span><br>
                         <span class="section-heading-desc" style="font-size: 18px;">
-                            The name, Heritogather, is a combination of the words "Heritage" and "Together"
+                            The name, CommuniLink, is a combination of the words "Communicate" and "Link", as the aim of the app is to aid users in their communication, 
+                            to allow them to communicate and connect better with thier peers. Open Sans Regular is selected for body text due to its excellent 
+                            legibility and clean appearance, ensuring ease of reading. Open Sans Bold is used to emphasize critical instructions, such as 
+                            transportation directions, by utilizing its thicker strokes. Proxima Soft Extra Bold is chosen for headers, titles, and high-emphasis 
+                            elements like game questions, providing a bold, attention-grabbing presence.
                     </h4>
                     <a class="btn btn-livedemo btn-xl" href="https://xd.adobe.com/view/e2aa1afa-31c0-4266-a982-73ea609aab13-b7f9/" target="_blank">View Prototype</a>
                 </div>
-                <!-- <div class="col-8 bg-faded rounded p-5" >
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-lower">SOI Learning Portal</span>
-                    </h2>
-                    <p class="mb-0">
-                        The School of Infocomm (SOI) Learning Portal is an online catalogue of various lessons ranging from coding to 
-                        UI/UX design lessons that provides you with an easy way to sign up for various courses that would best fit 
-                        your interest and learning needs.
-                    </p><br>
-                    <a class="btn btn-primary btn-xl" href="soi learning portal.html">View More</a>
-                </div> -->
             </div>
         </section>
 
         <h2 class="site-heading text-center text-faded d-none d-lg-block">
           <span class="site-heading-lower"><b>Gallery</b></span>
       </h2>
+
+      <div class="slideshow-container">
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">1 / 3</div> -->
+          <img src="assets/img/development/home page.png" style="width:30%">
+          <!-- <div class="text">Insert Movie Page</div> -->
+        </div>
+        
+        <div class="mySlides">
+          <img src="assets/img/development/moviesapp2(showlist).jpg" style="width:30%">
+          <!-- <div class="text">Show Movies Page</div> -->
+        </div>
+        
+        <div class="mySlides">
+          <img src="assets/img/development/moviesapp3(edit).jpg" style="width:30%">
+          <!-- <div class="text">Edit Movie Page</div> -->
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesapp4(cancelchange).jpg" style="width:30%">
+            <!-- <div class="text">Cancel changes dialog box</div> -->
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/img/development/moviesapp5(deletemovie).jpg" style="width:30%">
+            <!-- <div class="text">Delete Movie dialog box</div> -->
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+        <br>
         
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Joy Poh. All rights reserved. 2024</p></div><br>
@@ -127,5 +236,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/slideshow.js"></script>
     </body>
 </html>
