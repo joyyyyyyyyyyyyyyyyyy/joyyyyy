@@ -579,9 +579,9 @@
     </div>
 
     <script>
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
+        // function closeModal(modalId) {
+        //     document.getElementById(modalId).style.display = "none";
+        // }
 
         let slideIndex1 = 1;
         let slideIndex2 = 1;
@@ -591,6 +591,7 @@
         let slideIndex6 = 1;
         let slideIndex7 = 1;
         let slideIndex8 = 1;
+        //used to display img slideshow
         showSlides(slideIndex1, 'mySlides1');
         showSlides(slideIndex2, 'mySlides2');
         showSlides(slideIndex3, 'mySlides3');
@@ -600,6 +601,9 @@
         showSlides(slideIndex7, 'mySlides7');
         showSlides(slideIndex8, 'mySlides8');
 
+        //defines plusslide func that is called when next/prev btn is clicked on
+        //takes in 2 arguments, n which is passed to showslide func to increase/decrease current slide index by n
+        //slideclass specifies the specific slideshow to operate on
         function plusSlides(n, slideClass) {
             if (slideClass === 'mySlides1') {
                 showSlides(slideIndex1 += n, slideClass);
@@ -620,7 +624,14 @@
             }
         }
 
+        //used to display a specific slide for a given slideshow
+        //takes in 2 arguments, n indicating the index of the current slideto be displayed
+        //slideclass, string parameter representing the class name of the slideshow to display
         function showSlides(n, slideClass) {
+            //selects all elements having the class name passed in slideclass using getelementsbyclassname
+            //if statemen checks if index value of current slide is greater than the length of the slideshow
+            //1st if statement checks if n is greater than the length of slides, if yes, resets the value of slideindex to 1
+            //2nd if statement checks if the value of n is less than 1, if yes, sets the slideindex to length of slide, eg 1
             let slides = document.getElementsByClassName(slideClass);
             if (n > slides.length) { n = 1; }
             if (n < 1) { n = slides.length; }
