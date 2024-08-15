@@ -10,6 +10,7 @@
 
 // });
 
+//create variable typingelement, uses querySelector() method to select the element with the class of "typing"
 var typingElement = document.querySelector('.typing');
 var typed = new Typed(typingElement, {
     strings: ["Student", "Web Developer", "UI/UX Designer", "Cybersecurity Enthusiast"],
@@ -18,15 +19,6 @@ var typed = new Typed(typingElement, {
     backSpeed: 100,
     loop: true
 });
-
-// window.addEventListener('scroll', function() {
-//     var navbar = document.getElementById('mainNav');
-//     var header = document.querySelector('header');
-//     var headerHeight = header.offsetHeight;
-
-//     if (window.pageYOffset > headerHeight) {
-//         navbar.classList.add('sticky-top');
-//     } else {
-//         navbar.classList.remove('sticky-top');
-//     }
-// });
+//typeSpeed: 100,determines the speed of each character being typed out
+//backSpeed: 100,determines the speed at which the animation should erase each string 
+//loop: true: makes the typed strings loop infinitely
